@@ -289,13 +289,14 @@
         text-decoration:none;
         color:$color-primary-blue;
         // padding: 0 0 5px 0 !important;
-        padding: 4px 10px !important;
+        padding: 4px 0 !important;
         border-bottom: 2px solid  transparent;
         transition: 0.2s border-color;
         display:block;
         @media (width >= $screen-break-lg) {
             font-size:18px;
             line-height:20px;
+            padding: 4px 10px !important;
         }
     }
     
