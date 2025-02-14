@@ -3,7 +3,6 @@
 @import './fonts.scss';
 @import './column-framework.scss';
 
-
 html,
 body{
   margin:0;
@@ -11,74 +10,68 @@ body{
   font-family: $primary-font;
   color: $color-primary-blue;
 }
+main{
+  min-height:calc(100vh - 146px);
+}
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
   font-family: $primary-font;
 }
 h1, .h1{
   font-size:40px;
-  line-height:50px;
+  line-height:1.2;
   font-weight:500;
   margin-top:20px;
   margin-bottom:20px;
   @media (width >= $screen-break-lg) {
     font-size:50px;
-    line-height:60px;
   }
   @media (width >= $screen-break-xl) {
     font-size:60px;
-    line-height:70px;
   }
   @media (width >= $screen-break-xxl) {
     font-size:70px;
-    line-height:80px;
   }
 }
 h2, .h2{
   font-size:30px;
-  line-height:40px;
+  line-height:1.2;
   font-weight:400;
   margin-top:10px;
   margin-bottom:10px;
   @media (width >= $screen-break-md) {
     font-size:35px;
-    line-height:45px;
   }
   @media (width >= $screen-break-lg) {
     font-size:50px;
-    line-height:60px;
     margin-top:20px;
     margin-bottom:20px;
   }
   @media (width >= $screen-break-xl) {
     font-size:60px;
-    line-height:70px;
   }
 }
 h3, .h3{
   font-size:24px;
-  line-height:30px;
+  line-height:1.2;
   font-weight:400;
   @media (width >= $screen-break-lg) {
     font-size:40px;
-    line-height:50px;
   }
 }
 h4, .h4{
   font-size:22px;
-  line-height:28px;
+  line-height:1.2;
   font-weight:400;
   @media (width >= $screen-break-lg) {
     font-size:30px;
-    line-height:40px;
   }
 }
 h5, .h5{
   font-size:20px;
-  line-height:26px;
+  line-height:1.2;
   font-weight:400;
   @media (width >= $screen-break-lg) {
     font-size:24px;
-    line-height:34px;
   }
 }
 dl, ol, ul{
@@ -89,11 +82,10 @@ p{
 }
 p, dl, ol, ul, a, .paragraph{
   font-size:16px;
-  line-height:21px;
+  line-height:1.2;
   font-family:$secontary-font;
   @media (width >= $screen-break-lg) {
     font-size:18px;
-    line-height:24px;
   }
 }
 a{
@@ -120,49 +112,48 @@ button{
   font-family:$primary-font;
 }
 
-
 section{
-  margin:$gutter-md 0;
+  padding:$gutter-md 0;
   &:last-of-type{
-    margin-bottom: 0.5 * $gutter-lg;
+    padding-bottom: 0.5 * $gutter-lg;
     @media (width >= $screen-break-lg) {
-      margin-bottom: $gutter-lg;
+      padding-bottom: $gutter-lg;
     }
   }
   &.gutter-top-sm{
-    margin-top:0.5 * $gutter-sm;
+    padding-top:0.5 * $gutter-sm;
     @media (width >= $screen-break-lg) {
-      margin-top:$gutter-sm;
+      padding-top:$gutter-sm;
     }
   }
   &.gutter-top-md{
-    margin-top:0.5 * $gutter-md;
+    padding-top:0.5 * $gutter-md;
     @media (width >= $screen-break-lg) {
-      margin-top:$gutter-md;
+      padding-top:$gutter-md;
     }
   }
   &.gutter-top-lg{
-    margin-top:0.5 * $gutter-lg;
+    padding-top:0.5 * $gutter-lg;
     @media (width >= $screen-break-lg) {
-      margin-top:$gutter-lg;
+      padding-top:$gutter-lg;
     }
   }
   &.gutter-bottom-sm{
-    margin-bottom:0.5 * $gutter-sm;
+    padding-bottom:0.5 * $gutter-sm;
     @media (width >= $screen-break-lg) {
-      margin-bottom:$gutter-sm;
+      padding-bottom:$gutter-sm;
     }
   }
   &.gutter-bottom-md{
-    margin-bottom:0.5 * $gutter-md;
+    padding-bottom:0.5 * $gutter-md;
     @media (width >= $screen-break-lg) {
-      margin-bottom:$gutter-md;
+      padding-bottom:$gutter-md;
     }
   }
   &.gutter-bottom-lg{
-    margin-bottom:0.5 * $gutter-lg;
+    padding-bottom:0.5 * $gutter-lg;
     @media (width >= $screen-break-lg) {
-      margin-bottom:$gutter-lg;
+      padding-bottom:$gutter-lg;
     }
   }
 }
@@ -244,7 +235,21 @@ section{
     padding:30px;
   }
 }
-
+.justify-content-flex-start{
+  justify-content: flex-start;
+}
+.justify-content-flex-end{
+  justify-content: flex-end;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.justify-content-space-between{
+  justify-content: space-between;
+}
+.justify-content-space-around{
+  justify-content: space-between;
+}
 .cta-wrapper{
   text-align:center;
   margin:30px 0;
@@ -266,7 +271,7 @@ button{
     text-align:center;
     font-size:18px;
     font-weight:500;
-    line-height:22px;
+    line-height:1.2;
     padding:12px 24px;
     border-radius:2px;
     border: 2px solid $color-secondary-blue;
@@ -319,13 +324,11 @@ button{
   padding-bottom:10px;
 }
 .swiper-slide{
-  // overflow:hidden;
   background-position:top;
   background-size:cover;
   display:flex;
   align-items:center;
   justify-content:center;
-  // color:$color-white;
   font-size:20px;
   font-weight:bold;
 }
