@@ -1,0 +1,408 @@
+// @import '../../styles/variables.scss';
+@import '../../styles/variables.scss';
+
+.root{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:11;
+    & + main{
+        margin-top: 70px;
+        padding-top:1px;
+        @media (width >= $screen-break-lg) {
+            margin-top: 100px;
+        }
+    }
+    .container{
+        padding-left:0;
+        padding-right:0;
+        position:relative;
+        @media (width < $screen-break-lg) {
+            margin:0;
+        }
+        
+    }
+    .row{
+        margin:0;
+    }
+    
+    // Logo Styles
+    .logoColumn{
+        // padding-left:0;
+        // padding-right:0;
+        @media (width < $screen-break-lg) {
+            background-color:$color-white;
+            box-shadow: 0 -4px 10px rgba(10,36,23,.2);
+        }
+        // @media (width >= $screen-break-lg) {
+        //     padding-left:10px;
+        //     padding-right:10px;
+        // }
+    }
+    .logoImage{
+        max-width: 100%;
+        height: auto !important;
+        position: relative !important;
+        display: block;
+    }
+    .logoWrapper{
+        width: 120px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin:10px 20px;
+        @media (width >= $screen-break-lg) {
+            margin:15px 10px;
+            width: 140px;
+        }
+    }
+    .menuToggleWrapper{
+        position:absolute;
+        // right:15px;
+        left: calc(100vw - 50px);
+        top:17px;
+        @media (width >= $screen-break-lg) {
+            display:none;
+        }
+    }
+    .menuToggleButton{
+        background:none;
+        border:none;
+        position:relative;
+        width:27px;
+        height:32px;
+        &:before,
+        &:after{
+            position:absolute;
+            content:'';
+            background-color:$color-primary-blue;
+            width:100%;
+            height:2px;
+            left:0;
+            transition:0.3s all;
+        }
+        &:before{
+            top:10px;
+        }
+        &:after{
+            bottom:10px;
+        }
+    }
+    .menuToggleButtonActive{
+        &:before{
+            top:15px;
+            transform: rotate(45deg);
+        }
+        &:after{
+            bottom:15px;
+            transform: rotate(-45deg);
+        }
+    }
+    .mobileMenuContainer{
+        padding-left:0;
+        padding-right:0;
+        @media (width < $screen-break-lg) {
+            right: -100%;
+            transition:0.5s right;
+            position:absolute;
+            width: 100%;
+            top: 100%;
+        }
+        @media (width >= $screen-break-lg) {
+            height:auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // padding-left:10px;
+            // padding-right:10px;
+        }
+    }
+    .mobileMenuOpenTrue{
+        @media (width < $screen-break-lg) {
+            right: 0;
+            overflow:scroll;
+            height:100vh;
+            .primaryNav{
+                padding-bottom:100px;
+            }
+        }
+    }
+
+    // Primary Menu
+    .primaryNavRow{
+        padding:0;
+        @media (width >= $screen-break-lg) {
+            box-shadow: 0 -4px 10px rgba(10,36,23,.2);
+            background-color: $color-white;
+            z-index: 1;
+            position: relative;
+            padding:5px 0;
+        }
+    }
+    .primaryNavWrapper{
+        background-color:$color-white;
+        height:100vh;
+        @media (width >= $screen-break-lg) {
+            background-color:$color-transparent;
+            height:auto;
+        }
+    }
+    .primaryNav{
+        list-style:none;
+        padding-left:0;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 0;
+        @media (width >= $screen-break-lg) {
+            flex-direction: row; 
+            gap:10px;
+            align-items: center;
+        }
+    }
+    .primaryItem{
+        position:relative;
+        z-index: 2;
+        border-bottom:2px solid $color-grey;
+        padding: 10px 20px;
+        transition:0.3s padding-bottom;
+        &:last-of-type{
+            border-bottom:none;
+        }
+        @media (width >= $screen-break-lg) {
+            padding: 0 5px;
+            border-bottom:none;
+        }
+        @media (width >= $screen-break-lg) {
+            &:hover{
+                &.hasSubMenu{
+                    .primaryHeader{
+                        &:after{
+                            top: 8px;
+                            transform: rotate(270deg);
+                        }
+                    }
+                }
+                .primarySubNavWrapper{
+                    pointer-events: all;
+                    max-height: 600px;
+                    opacity:1;
+                    padding-inline-start: 0px;
+                }
+                .primaryLink{
+                    border-color:$color-secondary-blue;
+                }
+            }
+        }
+        @media (width < $screen-break-lg) {
+            &.activeButton{
+                padding-bottom:0;
+                &.hasSubMenu{
+                    &:after{
+                        transform: rotate(270deg);
+                    }
+                }
+                .primarySubNav{
+                    padding:20px 40px 20px 20px;
+                }
+                .primarySubNavWrapper{
+                    pointer-events:all;
+                    max-height: 600px;
+                    opacity:1;
+                    padding-inline-start: 0px;
+                }
+                .primaryHeader{
+                    padding:0 0 15px 0 !important;
+                    &:after{
+                        top: 3px;
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+        }
+        // &:not(.hasSubMenu) {
+        //     margin-top:4px;
+        // }
+    }
+    .hasSubMenu{
+        padding-right: 0;
+        @media (width >= $screen-break-lg) {
+            padding-right: 15px;
+        }
+        .primaryHeader{
+            position:relative;
+            &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                right: -15px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                top: 8px;
+                border-color: transparent transparent transparent #02524b;
+                border-width: 4px;
+                transform: rotate(90deg);
+                transition: 0.3s all;
+                @media (width >= $screen-break-lg) {
+                    right: -4px;
+                    top: 12px;
+                }
+            }
+        }
+    }
+    .primaryHeader{
+        font-size:18px;
+        line-height:20px;
+        border:none;
+        background:none;
+        color:$color-primary-blue;
+        font-family: $primary-font;
+        padding: 0 0 5px 0!important;
+        cursor:pointer;
+        transition:0.2s border-color, 0.3s padding;
+        position:relative;
+        @media (width >= $screen-break-lg) {
+            font-size:18px;
+            line-height:20px;
+            padding: 4px 10px !important;
+            &:before{
+                content: "";
+                height: 2px;
+                width: calc(100% - 5px);
+                background-color: $color-transparent;
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                transition:0.3s background-color;
+            }
+            &:hover{
+                &:before{
+                    background-color: $color-secondary-blue;
+                }
+            }
+        }
+    }
+    .primaryLink{
+        font-size:18px;
+        line-height:20px;
+        text-decoration:none;
+        color:$color-primary-blue;
+        // padding: 0 0 5px 0 !important;
+        padding: 4px 0 !important;
+        border-bottom: 2px solid  transparent;
+        transition: 0.2s border-color;
+        display:block;
+        @media (width >= $screen-break-lg) {
+            font-size:18px;
+            line-height:20px;
+            padding: 4px 10px !important;
+        }
+    }
+    
+    .primaryCtaSecondaryLink{
+        font-size: 18px;
+        line-height: 20px;
+        text-decoration: none;
+        color: $color-white;
+        margin: 0;
+        display: inline-block;
+        padding: 10px 18px;
+        @media (width >= $screen-break-lg) {
+            display: inline;
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+    .primarySubNavWrapper{
+        position:relative;
+        background-color:$color-white;
+        z-index:1;
+        top:100%;
+        left:-20px;
+        max-height:0px;
+        overflow:hidden;
+        transition:0.5s max-height, 0.5s opacity;
+        padding-top: 0;
+        padding-left:0;
+        opacity:0;
+        width:calc(100% + 40px);
+        pointer-events:none;
+        @media (width >= $screen-break-lg) {
+            box-shadow: 0 3px 3px rgba(10,36,23,.1);
+            position:absolute;
+            padding-top: 20px;
+            width: max-content;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    .primarySubNav{
+        list-style:none;
+        padding-left:0;
+        padding: 20px;
+        background-color:$color-grey;
+        @media (width >= $screen-break-lg) {
+            padding: 15px 30px 30px 30px;
+            background-color:transparent;
+        }
+    }
+
+    .subItemRow{
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+        padding-inline-start: 0px;
+        @media (width >= $screen-break-sm) {
+            gap:60px;
+        }
+    }
+    .subItemColumn{
+        position:relative;
+        list-style: none;
+        padding-inline-start:0px;
+        @media (width < $screen-break-sm) {
+            flex:0 0 100%;
+        }
+        &:after{
+            content:"";
+            height:100%;
+            width:2px;
+            background-color:$color-grey;
+            position:absolute;
+            top:0;
+            right:-30px;
+        }
+        &:last-of-type{
+            &:after{
+                content:none;
+            }
+        }
+    }
+
+    .navList{
+        list-style: none;
+        padding-left:0;
+        margin-top:0;
+    }
+    .primarySubItem{
+        margin:15px 0;
+        &:first-of-type{
+            margin-top:0;
+        }
+        &:last-of-type{
+            margin-bottom:0;
+        }
+    }
+    .primarySubLink{
+        color:$color-primary-blue;
+        text-decoration:none;
+        font-size:16px;
+        line-height:24px;
+        transition:0.3s opacity;
+        font-weight:400;
+        &:hover{
+            opacity:0.5
+        }
+    }
+}

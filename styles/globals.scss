@@ -98,6 +98,7 @@ p, dl, ol, ul, a, .paragraph{
 }
 a{
   color:$color-secondary-blue;
+  font-family: $primary-font;
 }
 br{
   display:none;
@@ -270,6 +271,7 @@ button{
     border-radius:2px;
     border: 2px solid $color-secondary-blue;
     background-color: $color-secondary-blue;
+    font-family: $primary-font;
     margin:5px 0;
     min-width:200px;
     transition: all 0.3s;
