@@ -253,7 +253,7 @@
     }
     .primaryHeader{
         font-size:18px;
-        line-height:20px;
+        line-height:1.2;
         border:none;
         background:none;
         color:$color-primary-blue;
@@ -264,7 +264,6 @@
         position:relative;
         @media (width >= $screen-break-lg) {
             font-size:18px;
-            line-height:20px;
             padding: 4px 10px !important;
             &:before{
                 content: "";
@@ -285,7 +284,7 @@
     }
     .primaryLink{
         font-size:18px;
-        line-height:20px;
+        line-height:1.2;
         text-decoration:none;
         color:$color-primary-blue;
         // padding: 0 0 5px 0 !important;
@@ -295,14 +294,13 @@
         display:block;
         @media (width >= $screen-break-lg) {
             font-size:18px;
-            line-height:20px;
             padding: 4px 10px !important;
         }
     }
     
     .primaryCtaSecondaryLink{
         font-size: 18px;
-        line-height: 20px;
+        line-height: 1.2;
         text-decoration: none;
         color: $color-white;
         margin: 0;
@@ -311,7 +309,6 @@
         @media (width >= $screen-break-lg) {
             display: inline;
             font-size: 18px;
-            line-height: 20px;
         }
     }
     .primarySubNavWrapper{
@@ -398,7 +395,7 @@
         color:$color-primary-blue;
         text-decoration:none;
         font-size:16px;
-        line-height:24px;
+        line-height:1.2;
         transition:0.3s opacity;
         font-weight:400;
         &:hover{
