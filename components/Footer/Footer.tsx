@@ -1,5 +1,5 @@
 import Style from './Footer.module.scss';
-import {Footer as FooterType } from '../../typescript/component'
+import {Footer as FooterType } from '../../typescript/GlobalComponent'
 
 export const Footer = ({settings}:FooterType) => {
   return (

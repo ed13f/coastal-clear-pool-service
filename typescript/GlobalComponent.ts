@@ -4,16 +4,17 @@ export type Header = any;
 export type CTA = {
   link: string;
   title: string;
-  open_in_new_window?:boolean;
+  openInNewWindow?:boolean;
 };
 
 export type Image = {
   url:string;
-  alt_text:string;
+  altText:string;
 }
 
 export type SettingsInput = {
-  top_spacing?:string;
-  bottom_spacing?:string;
-  background_color?:string;
+  topSpacing?:string;
+  bottomSpacing?:string;
+  backgroundColor?:string;
+  heroType?:string;
 }

@@ -1,7 +1,8 @@
+import { HeroSection } from '../../components/HeroSection';
+import { heroData } from '../../data/pages/Home';
+
 export default function Home() {
   return (
-    <section>
-      <h1>Hi Rico</h1>
-    </section>
+      <HeroSection hero={heroData} />
   );
 }

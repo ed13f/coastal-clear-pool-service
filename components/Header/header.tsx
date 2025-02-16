@@ -106,7 +106,7 @@ import headerData from '../../data/header/navigation';
     }
   }, []);
  
-  console.log('headerData: ', headerData);
+  // console.log('headerData: ', headerData);
   return (
     <header className={`header ${styles.root}`}>
       {/*  -- Primary Navigation 1 -- */}

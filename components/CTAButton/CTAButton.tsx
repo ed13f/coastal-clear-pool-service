@@ -1,4 +1,3 @@
-// TODO User CTAs Component Globally
 import React from 'react';
 import Link from 'next/link'
 
@@ -9,7 +8,7 @@ type CTAComponent = {
 };
 
 const renderCTA = ( cta: CTA) => {
-  if(cta.open_in_new_window){
+  if(cta.openInNewWindow){
     return <a className={`cta`} href={cta.link} target="_blank" rel="noopener noreferrer">{cta.title}</a>
   } else {
     {/* TODO: Fix <link></link> */}
