@@ -6,9 +6,7 @@ import { CTA as CTAType, Image as ImageType, SettingsInput } from '../../typescr
 type HeroType = {
     hero:{
         settings: SettingsInput;
-        preheader:string;
         header:string;
-        subheader:string;
         description:string;
         cta:CTAType;
         image: ImageType;
@@ -23,9 +21,7 @@ export const HeroSection = ({hero} : HeroType) => {
     return (
         <HeroTwoColumnImage 
             settings={hero.settings} 
-            preheader={hero.preheader}
-            header={hero.header} 
-            subheader={hero.subheader} 
+            header={hero.header}
             description={hero.description} 
             cta={hero.cta} 
             image={hero.image}

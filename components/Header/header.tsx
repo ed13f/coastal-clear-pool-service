@@ -105,8 +105,6 @@ import headerData from '../../data/header/navigation';
         window.removeEventListener('scroll', handleScroll)
     }
   }, []);
- 
-  // console.log('headerData: ', headerData);
   return (
     <header className={`header ${styles.root}`}>
       {/*  -- Primary Navigation 1 -- */}

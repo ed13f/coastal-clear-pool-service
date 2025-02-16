@@ -23,26 +23,22 @@ const modifyClassName = ({
 
 type HeroTwoColumnImage = {
     settings: SettingsInput;
-    preheader:string;
     header:string;
-    subheader:string;
     description:string;
     cta:CTAType;
     image: ImageType;
 }
 
-export const HeroTwoColumnImage = ({ settings, preheader='', header,subheader,description,cta,image}: HeroTwoColumnImage) => {
+export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: HeroTwoColumnImage) => {
   return (
     <section className={`hero ${styles.hero} ${modifyClassName(settings)}`}>
         <div className={`container`}>
             <div className={`${styles.row} row ${(image && !image.url) && styles.noFeaturedImageBackground}`}>
                 <div className={`col-12 col-md-6 order-2 order-md-1`}>
                     <div className={`${styles.contentWrapper}`}>
-                        {preheader && <p className={`${styles.preheader} h3`} dangerouslySetInnerHTML={{ __html: preheader }}></p> }  
                         <div className={styles.headerWrapper}>
                             {header && <h1 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h1> }
                         </div>  
-                        {subheader && <h2 className={`${styles.subheader} h3`} dangerouslySetInnerHTML={{ __html: subheader }}></h2> }
                         {description && <div className={`${styles.description} largeText`} dangerouslySetInnerHTML={{ __html: description }}></div> }
                         <div className={`${styles.ctaWrapper}`}>
                             <CTAButton cta={cta}></CTAButton>
