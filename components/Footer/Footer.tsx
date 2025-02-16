@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Style from './Footer.module.scss';
 import {Footer as FooterType } from '../../typescript/component'
 
