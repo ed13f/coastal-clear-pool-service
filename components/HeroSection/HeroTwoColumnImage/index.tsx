@@ -1,0 +1,1 @@
+export { HeroTwoColumnImage } from './HeroTwoColumnImage';

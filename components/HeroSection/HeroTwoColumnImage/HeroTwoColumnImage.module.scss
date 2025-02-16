@@ -1,0 +1,67 @@
+@import '../../../styles/variables.scss';
+
+section.hero.twoColumnImage{
+    .contentWrapper{
+        padding-right:0;
+        @media (width >= $bp-md) {
+            padding-right:50px;
+        }
+        @media (width >= $bp-lg) {
+            padding-right:60px;
+        }
+    }
+    .row{
+        align-items:center;
+    }
+    .imageBorder{
+        margin: 10px 0px;
+        position:relative;
+        z-index:1;
+        img{
+            position:relative !important;
+            display:block;
+        }
+    }
+    .headerWrapper{
+        display:flex;
+    }
+    .preheader{
+        margin:20px 0 0;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+        @media (width >= $bp-sm) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media (width >= $bp-md) {
+            margin: 0;
+        }
+        @media (width >= $bp-lg) {
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+    .subheader{
+        margin-bottom:30px;
+    }
+    .description,
+    .description p,
+    .description a{
+        font-weight:400;
+        font-size: 16px;
+        line-height: 21px;
+        @media (width >= $bp-lg) {
+            font-size: 21px;
+            line-height: 28px;
+        }
+    }
+    .ctaWrapper{
+        text-align:center;
+        margin-top:15px;
+        @media (width >= $bp-sm) {
+            text-align:left;
+            margin-top:30px;
+        }
+    }
+}
