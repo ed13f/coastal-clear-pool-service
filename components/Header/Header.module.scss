@@ -10,15 +10,16 @@
     & + main{
         margin-top: 70px;
         padding-top:1px;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             margin-top: 100px;
         }
     }
     .container{
         padding-left:0;
         padding-right:0;
+        padding-top:0;
         position:relative;
-        @media (width < $screen-break-lg) {
+        @media (width < $bp-lg) {
             margin:0;
         }
         
@@ -31,14 +32,10 @@
     .logoColumn{
         // padding-left:0;
         // padding-right:0;
-        @media (width < $screen-break-lg) {
+        @media (width < $bp-lg) {
             background-color:$color-white;
             box-shadow: 0 -4px 10px rgba(10,36,23,.2);
         }
-        // @media (width >= $screen-break-lg) {
-        //     padding-left:10px;
-        //     padding-right:10px;
-        // }
     }
     .logoImage{
         max-width: 100%;
@@ -51,7 +48,7 @@
         margin-top: 15px;
         margin-bottom: 15px;
         margin:10px 20px;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             margin:15px 10px;
             width: 140px;
         }
@@ -61,7 +58,7 @@
         // right:15px;
         left: calc(100vw - 50px);
         top:17px;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             display:none;
         }
     }
@@ -101,14 +98,14 @@
     .mobileMenuContainer{
         padding-left:0;
         padding-right:0;
-        @media (width < $screen-break-lg) {
+        @media (width < $bp-lg) {
             right: -100%;
             transition:0.5s right;
             position:absolute;
             width: 100%;
             top: 100%;
         }
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             height:auto;
             display: flex;
             flex-direction: column;
@@ -118,7 +115,7 @@
         }
     }
     .mobileMenuOpenTrue{
-        @media (width < $screen-break-lg) {
+        @media (width < $bp-lg) {
             right: 0;
             overflow:scroll;
             height:100vh;
@@ -131,7 +128,7 @@
     // Primary Menu
     .primaryNavRow{
         padding:0;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             box-shadow: 0 -4px 10px rgba(10,36,23,.2);
             background-color: $color-white;
             z-index: 1;
@@ -142,7 +139,7 @@
     .primaryNavWrapper{
         background-color:$color-white;
         height:100vh;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             background-color:$color-transparent;
             height:auto;
         }
@@ -154,7 +151,7 @@
         flex-direction: column;
         justify-content: flex-end;
         margin-top: 0;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             flex-direction: row; 
             gap:10px;
             align-items: center;
@@ -169,11 +166,11 @@
         &:last-of-type{
             border-bottom:none;
         }
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             padding: 0 5px;
             border-bottom:none;
         }
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             &:hover{
                 &.hasSubMenu{
                     .primaryHeader{
@@ -194,7 +191,7 @@
                 }
             }
         }
-        @media (width < $screen-break-lg) {
+        @media (width < $bp-lg) {
             &.activeButton{
                 padding-bottom:0;
                 &.hasSubMenu{
@@ -226,7 +223,7 @@
     }
     .hasSubMenu{
         padding-right: 0;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             padding-right: 15px;
         }
         .primaryHeader{
@@ -244,7 +241,7 @@
                 border-width: 4px;
                 transform: rotate(90deg);
                 transition: 0.3s all;
-                @media (width >= $screen-break-lg) {
+                @media (width >= $bp-lg) {
                     right: -4px;
                     top: 12px;
                 }
@@ -262,7 +259,7 @@
         cursor:pointer;
         transition:0.2s border-color, 0.3s padding;
         position:relative;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             font-size:18px;
             padding: 4px 10px !important;
             &:before{
@@ -292,7 +289,7 @@
         border-bottom: 2px solid  transparent;
         transition: 0.2s border-color;
         display:block;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             font-size:18px;
             padding: 4px 10px !important;
         }
@@ -306,7 +303,7 @@
         margin: 0;
         display: inline-block;
         padding: 10px 18px;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             display: inline;
             font-size: 18px;
         }
@@ -325,7 +322,7 @@
         opacity:0;
         width:calc(100% + 40px);
         pointer-events:none;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             box-shadow: 0 3px 3px rgba(10,36,23,.1);
             position:absolute;
             padding-top: 20px;
@@ -339,7 +336,7 @@
         padding-left:0;
         padding: 20px;
         background-color:$color-grey;
-        @media (width >= $screen-break-lg) {
+        @media (width >= $bp-lg) {
             padding: 15px 30px 30px 30px;
             background-color:transparent;
         }
@@ -350,7 +347,7 @@
         gap:20px;
         flex-wrap:wrap;
         padding-inline-start: 0px;
-        @media (width >= $screen-break-sm) {
+        @media (width >= $bp-sm) {
             gap:60px;
         }
     }
@@ -358,7 +355,7 @@
         position:relative;
         list-style: none;
         padding-inline-start:0px;
-        @media (width < $screen-break-sm) {
+        @media (width < $bp-sm) {
             flex:0 0 100%;
         }
         &:after{
