@@ -39,7 +39,7 @@ export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: H
                         <div className={styles.headerWrapper}>
                             {header && <h1 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h1> }
                         </div>  
-                        {description && <div className={`${styles.description} largeText`} dangerouslySetInnerHTML={{ __html: description }}></div> }
+                        {description && <p className={`${styles.description} largeText`} dangerouslySetInnerHTML={{ __html: description }}></p> }
                         <div className={`${styles.ctaWrapper}`}>
                             <CTAButton cta={cta}></CTAButton>
                         </div>

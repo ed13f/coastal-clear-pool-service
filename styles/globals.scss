@@ -112,7 +112,10 @@ button{
 }
 
 section{
-  padding:$gutter-md 0;
+  padding:(0.5 * $gutter-md) 0;
+  @media (width >= $bp-lg) {
+    padding:$gutter-md 0;
+  }
   &:last-of-type{
     padding-bottom: 0.5 * $gutter-lg;
     @media (width >= $bp-lg) {
@@ -164,7 +167,7 @@ section{
   // }
   margin:0 auto;
   max-width:1200px;
-  padding:15px;
+  padding:0 15px;
 }
 
 .text-align-center{
