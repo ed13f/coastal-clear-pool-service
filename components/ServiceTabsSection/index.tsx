@@ -1,0 +1,1 @@
+export { ServiceTabsSection } from './ServiceTabsSection';
