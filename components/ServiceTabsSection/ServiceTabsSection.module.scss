@@ -324,8 +324,8 @@
         max-width:100%;
     }
     .bulletActive{
-        background-color: #b5d627;
-        border-color: #b5d627 !important;
+        background-color: $color-secondary-blue;
+        border-color: $color-secondary-blue !important;
         pointer-events: none;
     }
     .pagination{
