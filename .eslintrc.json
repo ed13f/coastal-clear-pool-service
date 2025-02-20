@@ -1,0 +1,110 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "next",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "next/core-web-vitals"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "jsx-a11y"
+    ],
+    "rules": {
+        "react/prop-types":0,
+        "no-undef":"off",
+        "react-hooks/exhaustive-deps":"off",
+        "@next/next/no-img-element":"off", //after we remove the existing components, this should be changed to warn
+        "react/react-in-jsx-scope": "off",
+        "no-unused-vars": "warn",
+        "no-console": "warn",
+        "no-empty-function": [
+          "error",
+          {
+            "allow": [
+              "functions",
+              "arrowFunctions",
+              "constructors"
+            ]
+          }
+        ],
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "jsx-a11y/alt-text": [
+          "error",
+          {
+            "elements": [
+              "img",
+              "object",
+              "area",
+              "input[type=\"image\"]"
+            ],
+            "img": [],
+            "object": [],
+            "area": [],
+            "input[type=\"image\"]": []
+          }
+        ],
+        "jsx-a11y/anchor-has-content": [
+          "error",
+          {
+            "components": []
+          }
+        ],
+        "jsx-a11y/anchor-is-valid": [
+          "error",
+          {
+            "components": [
+              "Link"
+            ],
+            "specialLink": [
+              "to"
+            ],
+            "aspects": [
+              "noHref",
+              "invalidHref",
+              "preferButton"
+            ]
+          }
+        ],
+        "jsx-a11y/aria-activedescendant-has-tabindex": "error",
+        "jsx-a11y/aria-unsupported-elements": "error",
+        "jsx-a11y/label-has-associated-control": [
+          "error",
+          {
+            "labelComponents": [],
+            "labelAttributes": [],
+            "controlComponents": [],
+            "assert": "both",
+            "depth": 25
+          }
+        ],
+        "jsx-a11y/no-noninteractive-tabindex": [
+          "error",
+          {
+            "tags": [],
+            "roles": [
+              "tabpanel"
+            ]
+          }
+        ]
+    },
+    "ignorePatterns": ["/components/legacy-todo-remove*","/public/js/*"]
+  
+  }
+  
