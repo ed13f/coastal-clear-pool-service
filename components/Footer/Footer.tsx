@@ -1,7 +1,7 @@
 import Style from './Footer.module.scss';
 import {Footer as FooterType } from '../../typescript/GlobalComponent'
 
-export const Footer = ({settings}:FooterType) => {
+export const Footer = ({}:FooterType) => {
   return (
     <footer className={`${Style.footer}`}>
       <div className={`container`}>

@@ -45,12 +45,17 @@ export type ServiceTabsSectionType = {
         }[];
 }
 
+type swiper = {
+    slidePrev: () => void;
+    slideNext: () => void;
+}
 export const ServiceTabsSection = ({ settings,header,description,cards }: ServiceTabsSectionType) => {
     const [activeCard, setActiveCard] = useState(0);
-    const [swiper, setSwiper] = useState<any>();
+    const [swiper, setSwiper] = useState<swiper>()
+    // const [swiper, setSwiper] = useState<Swiper | null>(null);
 
     const toggleDataAttributes = (event:React.MouseEvent<HTMLButtonElement>) => {
-        let index = event.currentTarget.dataset.index;
+        const index = event.currentTarget.dataset.index;
         setActiveCard(Number(index));
     };
     console.log('cards: ', cards[0].card.image.url);
@@ -134,7 +139,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
                     clickableClass: styles.pagination,
                     enabled: true,
                     }}
-                    onSwiper={(swiperInstance:any) => setSwiper(swiperInstance)}
+                    onSwiper={(swiperInstance) => setSwiper(swiperInstance)}
                 >
                     {/* Loop through all testimonial cards */}
                     {cards?.map((slide) => (
