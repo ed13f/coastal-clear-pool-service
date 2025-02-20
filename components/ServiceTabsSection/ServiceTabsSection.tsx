@@ -25,11 +25,11 @@ const modifyClassName = ({
     return modifiedClasses;
 } 
 
-type ServiceTabsSection = {
+export type ServiceTabsSectionType = {
     settings: SettingsInput;
     header:string;
     description:string;
-    cards:[ 
+    cards:
         {
             tab:{
                 image: ImageType;
@@ -42,11 +42,10 @@ type ServiceTabsSection = {
                 description:string;
                 cta: CTA;
             }
-        } 
-    ];
+        }[];
 }
 
-export const ServiceTabsSection = ({ settings,header,description,cards }: ServiceTabsSection) => {
+export const ServiceTabsSection = ({ settings,header,description,cards }: ServiceTabsSectionType) => {
     const [activeCard, setActiveCard] = useState(0);
     const [swiper, setSwiper] = useState<any>();
 

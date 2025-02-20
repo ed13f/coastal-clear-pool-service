@@ -8,13 +8,15 @@ export type CTA = {
 };
 
 export type Image = {
-  url:string;
-  altText:string;
+  url: string;
+  altText: string;
 }
 
 export type SettingsInput = {
-  topSpacing?:string;
-  bottomSpacing?:string;
-  backgroundColor?:string;
+  topSpacing?: 'Remove' | 'Small' | 'Medium' | 'Large' | undefined;
+  bottomSpacing?: 'Remove' | 'Small' | 'Medium' | 'Large' | undefined;
+  backgroundColor?: 'Grey' | 'Blue' | undefined;
   heroType?:string;
+  contentAlignment?: 'Left' | 'Center' | 'Right' | undefined;
+  maxWidth?: 'Small' | 'Medium' | 'Large' | undefined;
 }

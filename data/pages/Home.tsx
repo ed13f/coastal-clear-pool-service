@@ -1,7 +1,11 @@
-export const heroData = {
+import { FullWidthSectionType } from '../../components/FullWidthSection/FullWidthSection';
+import { ServiceTabsSectionType } from '../../components/ServiceTabsSection/ServiceTabsSection';
+import { HeroTwoColumnImageType } from '../../components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
+
+export const heroData: HeroTwoColumnImageType = {
     settings:{
-        topSpacing:"medium",
-        bottomSpacing:"medium",
+        topSpacing:"Medium",
+        bottomSpacing:"Medium",
         heroType: "Two Column (Image)",
     },
     header:"this is a header. this is a header. ",
@@ -17,10 +21,10 @@ export const heroData = {
     }
 }
 
-export const serviceTabsData = {
+export const serviceTabsData: ServiceTabsSectionType = {
     settings:{
-        topSpacing:"medium",
-        bottomSpacing:"medium",
+        topSpacing:"Medium",
+        bottomSpacing:"Medium",
     },
     header:"this is a header. this is a header.",
     description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
@@ -119,3 +123,23 @@ export const serviceTabsData = {
         }
     ]
 }
+
+export const fullWidthSectionData : FullWidthSectionType = {
+    settings:{
+        // topSpacing:"Small",
+        // bottomSpacing:"Small",
+        backgroundColor:"Blue",
+        contentAlignment:"Center",
+    },
+    header:"this is a header. this is a header. ",
+    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    cta: {
+        link:"/home",
+        title:"Test CTA",
+        openInNewWindow:false
+    },
+    image:{
+        url:"/images/hayward-brands.png",
+        altText:"alt text"
+    }
+} 

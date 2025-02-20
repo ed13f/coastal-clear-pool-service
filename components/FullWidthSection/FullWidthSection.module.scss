@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.root{
+    .featuredImage{
+        width:100%;
+        max-width:100%;
+        height:auto;
+        margin-top:30px;
+        margin-bottom:30px;
+        display:block;
+        @media (width >= $bp-lg) {
+            margin-top:45px;
+            margin-bottom:45px;
+        }
+    }
+    .imageWithBorder{
+        max-width:800px;
+        margin:30px auto;
+        @media (width >= $bp-lg) {
+            margin:45px auto;
+        }
+        .featuredImage{
+            margin:0;
+        }
+    }
+}
