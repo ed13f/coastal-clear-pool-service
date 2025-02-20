@@ -1,66 +1,48 @@
-
-import getConfig from "next/config";
-
-// import { Styles } from '../typescript/component';
-
-
 /* Global BGColor option that adds background color class to the root element in the Component */
-export const modifyComponentClassBGColor = (originalString:string, setting:string) => {
+export const modifyComponentClassBGColor = (originalString: string, setting: "Grey" | "Blue" | undefined ) => {
   switch(setting) {
     case 'Grey':
       originalString += ' bg bgGrey'; break;
-    case 'Green':
-      originalString += ' bg bgGreen'; break;
     case 'Blue':
       originalString += ' bg bgBlue'; break;
-    case 'Purple':
-      originalString += ' bg bgPurple'; break;
   }
   return originalString;
 };
 
 /* Global TopSpace option that adds top space class to the root element in the Component */
-export const modifyComponentClassTopSpace = (originalString:string, setting:string) => {
+export const modifyComponentClassTopSpace = (originalString:string, setting: "Remove" | "Small" | "Medium" | "Large" | undefined ) => {
   switch(setting) {
     case 'Remove':
-      originalString += ' removeGapTop'; break;
-      case 'Extra Small':
-        originalString += ' gapTopXs'; break;
+      originalString += ' removeGutterTop'; break;
     case 'Small':
-      originalString += ' gapTopSm'; break;
+      originalString += ' gutterTopSm'; break;
     case 'Large':
-      originalString += ' gapTopLg'; break;
-    case 'Extra Large':
-      originalString += ' gapTopXl'; break;
+      originalString += ' gutterTopLg'; break;
   }
   return originalString;
 };
 
 /* Global BottomSpace option that adds bottom space class to the root element in the Component */
-export const modifyComponentClassBottomSpace = (originalString:string, setting:string) => {
+export const modifyComponentClassBottomSpace = (originalString:string, setting: "Remove" | "Small" | "Medium" | "Large" | undefined ) => {
   switch(setting) {
     case 'Remove':
       originalString += ' removeGapBottom'; break;
-    case 'Extra Small':
-        originalString += ' gapBottomXs'; break;
     case 'Small':
-      originalString += ' gapBottomSm'; break;
+      originalString += ' gutterBottomSm'; break;
     case 'Large':
-      originalString += ' gapBottomLg'; break;
-    case 'Extra Large':
-      originalString += ' gapBottomXl'; break;
+      originalString += ' gutterBottomLg'; break;
   }
   return originalString;
 };
 
 /* Global Reverse option that adds reverse class to the root element in the Component */
-export const modifyComponentClassReverse = (originalString:string, setting:string) => {
+export const modifyComponentClassReverse = (originalString:string, setting:string | undefined ) => {
   if(setting){originalString += ' reverse';}
   return originalString;
 };
 
 /* Global AlignContent option that adds align content class to the root element in the Component */
-export const modifyComponentClassAlignContent = (originalString:string, setting:string) => {
+export const modifyComponentClassAlignContent = (originalString:string, setting: "Left" | "Center" | "Right" | undefined ) => {
   switch(setting) {
     case 'Left':
       originalString += ' alignLeft'; break;
@@ -73,18 +55,14 @@ export const modifyComponentClassAlignContent = (originalString:string, setting:
 };
 
 /* Global MaxWidth option that adds max width class to the root element in the Component */
-export const modifyComponentClassMaxWidth = (originalString:string, setting:string) => {
+export const modifyComponentClassMaxWidth = (originalString:string, setting:"Small" | "Medium" | "Large" | undefined ) => {
   switch(setting) {
-    case 'Extra Small':
-      originalString += ' containerWidthXs'; break;
     case 'Small':
       originalString += ' containerWidthSm'; break;
     case 'Medium':
       originalString += ' containerWidthMd'; break;
     case 'Large':
       originalString += ' containerWidthLg'; break;
-    case 'Extra Large':
-      originalString += ' containerWidthXl'; break;
   }
   return originalString;
 };

@@ -122,49 +122,110 @@ section{
       padding-bottom: $gutter-lg;
     }
   }
-  &.gutter-top-sm{
+
+  // Gutter top setting option
+  &.removeGutterTop{
+    padding-top:0;
+  }
+  &.gutterTopSm{
     padding-top:0.5 * $gutter-sm;
     @media (width >= $bp-lg) {
       padding-top:$gutter-sm;
     }
   }
-  &.gutter-top-md{
+  &.gutterTopMd{
     padding-top:0.5 * $gutter-md;
     @media (width >= $bp-lg) {
       padding-top:$gutter-md;
     }
   }
-  &.gutter-top-lg{
+  &.gutterTopLg{
     padding-top:0.5 * $gutter-lg;
     @media (width >= $bp-lg) {
       padding-top:$gutter-lg;
     }
   }
-  &.gutter-bottom-sm{
+
+  // Gutter bottom setting option
+  &.removeGutterBottom{
+    padding-bottom:0;
+  }
+  &.gutterBottomSm{
     padding-bottom:0.5 * $gutter-sm;
     @media (width >= $bp-lg) {
       padding-bottom:$gutter-sm;
     }
   }
-  &.gutter-bottom-md{
+  &.gutterBottomMd{
     padding-bottom:0.5 * $gutter-md;
     @media (width >= $bp-lg) {
       padding-bottom:$gutter-md;
     }
   }
-  &.gutter-bottom-lg{
+  &.gutterBottomLg{
     padding-bottom:0.5 * $gutter-lg;
     @media (width >= $bp-lg) {
       padding-bottom:$gutter-lg;
     }
   }
+  // Reverse setting option
+  &.reverse{
+    .row{
+        flex-direction: row-reverse;
+    }
+  }
+
+  //Background color setting option
+  &.bg{
+    &.bgGrey{
+      background-color:$color-grey;
+    }
+    &.bgBlue{
+      background-color:$color-primary-blue;
+      color:$color-white;
+      .cta{
+        background-color:$color-white;
+        color:$color-primary-blue;
+        &:hover{
+          background-color:$color-grey;
+        }
+      }
+      .imageBorder{
+        border: 2px solid $color-primary-blue;
+      }
+    }
+  }
+
+  //Max width container setting option
+  &.containerWidthSm{
+    .container{
+      max-width:$bp-sm;
+    }
+  }
+  &.containerWidthMd{
+    .container{
+      max-width:$bp-md;
+    }
+  }
+  &.containerWidthLg{
+    .container{
+      max-width:$bp-lg;
+    }
+  }
+
+  // Content align setting option
+  &.alignLeft{
+    text-align: left;
+  }
+  &.alignCenter{
+    text-align: center;
+  }
+  &.alignRight{
+    text-align: right;
+  }
 }
 
 .container{
-  // margin: 0 (0.5 * $gutter-sm);
-  // @media (width >= $bp-lg) {
-  //   margin: 0 $gutter-sm;
-  // }
   margin:0 auto;
   max-width:1200px;
   padding:0 15px;
@@ -285,6 +346,7 @@ button{
     border: 2px solid $color-secondary-blue;
     background-color: $color-secondary-blue;
     font-family: $primary-font;
+    font-weight:600;
     margin:5px 0;
     min-width:200px;
     transition: all 0.3s;

@@ -21,7 +21,7 @@ const modifyClassName = ({
     return modifiedClasses;
 }
 
-type HeroTwoColumnImage = {
+export type HeroTwoColumnImageType = {
     settings: SettingsInput;
     header:string;
     description:string;
@@ -29,7 +29,7 @@ type HeroTwoColumnImage = {
     image: ImageType;
 }
 
-export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: HeroTwoColumnImage) => {
+export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: HeroTwoColumnImageType) => {
   return (
     <section className={`hero ${styles.hero} ${modifyClassName(settings)}`}>
         <div className={`container`}>
