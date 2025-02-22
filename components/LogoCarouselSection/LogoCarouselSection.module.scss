@@ -15,14 +15,14 @@
         }
     }
     &.displayBackgroundSquare{
-        &.contentContainerSM,
-        &.contentContainerMD,
-        &.contentContainerLG{
+        &:global(.containerWidthSm),
+        &:global(.containerWidthMd),
+        &:global(.containerWidthLg){
             .headerContainer{
                 max-width:1400px;
             }
         }
-        &.contentContainerSM{
+        &:global(.containerWidthSm){
             .contentContainer,
             .ctaContainer{
                 max-width:100%;
@@ -30,14 +30,14 @@
                     max-width:$bp-md;
                 }
             }
-            .backgroundSquare{
-                @media (width >= $bp-md) {
-                    max-width:$bp-md - 120px;
-                    left: calc(50% - 0.5*($bp-md - 120px)); 
-                }
-            }
+            // .backgroundSquare{
+            //     @media (width >= $bp-md) {
+            //         max-width:$bp-md - 120px;
+            //         left: calc(50% - 0.5*($bp-md - 120px)); 
+            //     }
+            // }
         }
-        &.contentContainerMD{
+        &:global(.containerWidthMd){
             .contentContainer,
             .ctaContainer{
                 max-width:100%;
@@ -45,14 +45,14 @@
                     max-width:$bp-lg;
                 }
             }
-            .backgroundSquare{
-                @media (width >= $bp-lg) {
-                    max-width:$bp-lg - 120px;
-                    left: calc(50% - 0.5*($bp-lg - 120px)); 
-                }
-            }
+            // .backgroundSquare{
+            //     @media (width >= $bp-lg) {
+            //         max-width:$bp-lg - 120px;
+            //         left: calc(50% - 0.5*($bp-lg - 120px)); 
+            //     }
+            // }
         }
-        &.contentContainerLG{
+        &:global(.containerWidthSm){
             .contentContainer,
             .ctaContainer{
                 max-width:100%;
@@ -60,12 +60,12 @@
                     max-width:$bp-xl;
                 }
             }
-            .backgroundSquare{
-                @media (width >= $bp-xl) {
-                    max-width:$bp-xl - 120px;
-                    left: calc(50% - 0.5*($bp-xl - 120px)); 
-                }
-            }
+            // .backgroundSquare{
+            //     @media (width >= $bp-xl) {
+            //         max-width:$bp-xl - 120px;
+            //         left: calc(50% - 0.5*($bp-xl - 120px)); 
+            //     }
+            // }
         }
         .headerContainer{
             .header{
@@ -91,7 +91,7 @@
             }
         }
         .backgroundSquare{
-            background-color: #2f072d;
+            background-color: $color-primary-blue;
             border-radius: 15px;
             height: 100%;
             left: 15px;
@@ -132,7 +132,7 @@
             max-height: 80px;
         }
     }
-    &.contentContainerSM{
+    &:global(.containerWidthSm){
         .headerContainer,
         .contentContainer,
         .ctaContainer{
@@ -141,7 +141,7 @@
             margin-right:auto
         }
     }
-    &.contentContainerMD{
+    &:global(.containerWidthMd){
         .headerContainer,
         .contentContainer,
         .ctaContainer{
@@ -150,7 +150,7 @@
             margin-right:auto
         }
     }
-    &.contentContainerLG{
+    &:global(.containerWidthLg){
         .headerContainer,
         .contentContainer,
         .ctaContainer{

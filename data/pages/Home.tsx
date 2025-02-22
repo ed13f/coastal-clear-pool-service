@@ -153,7 +153,9 @@ export const logoCarouselSectionData : LogoCarouselSectionType = {
         bottomSpacing:"Medium",
         backgroundColor:"Grey",
         contentAlignment:"Center",
-        fullWidthContainer:true
+        fullWidthContainer:true,
+        displayBackgroundSquare:true,
+        maxWidth:'Small'
     },
     header:"this is a header. this is a header. ",
     description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
