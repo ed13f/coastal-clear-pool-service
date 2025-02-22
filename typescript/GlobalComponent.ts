@@ -19,4 +19,10 @@ export type SettingsInput = {
   heroType?:string;
   contentAlignment?: 'Left' | 'Center' | 'Right' | undefined;
   maxWidth?: 'Small' | 'Medium' | 'Large' | undefined;
+  fullWidthContainer?:boolean;
+  displayBackgroundSquare?:boolean;
+}
+export type Styles = {
+  fullWidthContainer?:string;
+  displayBackgroundSquare?:string;
 }

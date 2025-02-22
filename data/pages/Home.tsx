@@ -1,6 +1,8 @@
 import { FullWidthSectionType } from '../../components/FullWidthSection/FullWidthSection';
 import { ServiceTabsSectionType } from '../../components/ServiceTabsSection/ServiceTabsSection';
 import { HeroTwoColumnImageType } from '../../components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
+import { LogoCarouselSectionType } from '../../components/LogoCarouselSection/LogoCarouselSection';
+
 
 export const heroData: HeroTwoColumnImageType = {
     settings:{
@@ -142,4 +144,57 @@ export const fullWidthSectionData : FullWidthSectionType = {
         url:"/images/hayward-brands.png",
         altText:"alt text"
     }
+} 
+
+export const logoCarouselSectionData : LogoCarouselSectionType = {
+    settings:{
+        
+        topSpacing:"Medium",
+        bottomSpacing:"Medium",
+        backgroundColor:"Grey",
+        contentAlignment:"Center",
+        fullWidthContainer:true
+    },
+    header:"this is a header. this is a header. ",
+    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    cta: {
+        link:"/home",
+        title:"Test CTA",
+        openInNewWindow:false
+    },
+    logos:[
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text1"
+        },
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text2"
+        },
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text3"
+        },
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text4"
+        },
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text5"
+        },
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text6"
+        },
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text7"
+        },
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text8"
+        },
+
+    ]
 } 
