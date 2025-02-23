@@ -9,7 +9,7 @@ import 'swiper/scss';
 import { CTAButton } from '../CTAButton';
 import styles from './LogoCarouselSection.module.scss';
 import { SettingsInput, CTA, Image as ImageType, Styles } from '../../typescript/GlobalComponent';
-import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace,} from '../../helper'
+import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace,modifyComponentClassMaxWidth} from '../../helper'
 
 /* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = ({
@@ -24,7 +24,7 @@ const modifyClassName = ({
     modifiedClasses = modifyComponentClassTopSpace(modifiedClasses,topSpacing);
     modifiedClasses = modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing);
     modifiedClasses = modifyComponentClassBGColor(modifiedClasses,backgroundColor);
-    modifiedClasses = modifyComponentClassMaxWidth(modifiedClasses,backgroundColor);
+    modifiedClasses = modifyComponentClassMaxWidth(modifiedClasses,maxWidth);
     
     if(fullWidthContainer == true){
       modifiedClasses += ' ' + styles.fullWidthContainer;

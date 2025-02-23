@@ -111,6 +111,12 @@ button{
   font-family:$primary-font;
 }
 
+.description{
+  font-size:18px;
+  @media (width >= $bp-lg) {
+    font-size:25px;
+  }
+}
 section{
   padding:(0.5 * $gutter-md) 0;
   @media (width >= $bp-lg) {
