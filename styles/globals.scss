@@ -402,6 +402,7 @@ button{
   }
   img{
       border-radius:8px;
+      background-color: $color-white;
       @media (width >= $bp-lg) {
           border-radius:10px;
       }
@@ -421,6 +422,7 @@ button{
   .boxBorderInner{
       border: 2px solid $color-grey;
       border-radius:8px;
+      background-color:$color-white;
       @media (width >= $bp-lg) {
           border-radius:10px;
       }

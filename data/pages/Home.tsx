@@ -196,6 +196,25 @@ export const logoCarouselSectionData : LogoCarouselSectionType = {
             url:"/images/hayward-brands.png",
             altText:"alt text8"
         },
-
     ]
+} 
+
+export const twoColumnImageSectionData : FullWidthSectionType = {
+    settings:{
+        topSpacing:"Medium",
+        bottomSpacing:"Medium",
+        backgroundColor:"Grey",
+        contentAlignment:"Center",
+    },
+    header:"this is a header. this is a header. ",
+    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    cta: {
+        link:"/home",
+        title:"Test CTA",
+        openInNewWindow:false
+    },
+    image:{
+        url:"/images/hayward-brands.png",
+        altText:"alt text"
+    }
 } 
