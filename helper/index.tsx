@@ -35,12 +35,6 @@ export const modifyComponentClassBottomSpace = (originalString:string, setting: 
   return originalString;
 };
 
-/* Global Reverse option that adds reverse class to the root element in the Component */
-export const modifyComponentClassReverse = (originalString:string, setting:string | undefined ) => {
-  if(setting){originalString += ' reverse';}
-  return originalString;
-};
-
 /* Global AlignContent option that adds align content class to the root element in the Component */
 export const modifyComponentClassAlignContent = (originalString:string, setting: "Left" | "Center" | "Right" | undefined ) => {
   switch(setting) {

@@ -21,6 +21,7 @@ export type SettingsInput = {
   maxWidth?: 'Small' | 'Medium' | 'Large' | undefined;
   fullWidthContainer?:boolean;
   displayBackgroundSquare?:boolean;
+  reverseColumns?:boolean;
 }
 export type Styles = {
   fullWidthContainer?:string;

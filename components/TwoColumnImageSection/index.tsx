@@ -1,0 +1,1 @@
+export { TwoColumnImageSection } from './TwoColumnImageSection';
