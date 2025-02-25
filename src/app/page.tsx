@@ -35,7 +35,7 @@ export default function Home() {
         settings={twoColumnImageSectionData.settings}
         header={twoColumnImageSectionData.header}
         description={twoColumnImageSectionData.description}
-        image={twoColumnImageSectionData.image}
+        images={twoColumnImageSectionData.images}
         cta={twoColumnImageSectionData.cta}
       />
     </>
