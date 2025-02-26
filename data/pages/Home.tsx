@@ -2,6 +2,8 @@ import { FullWidthSectionType } from '../../components/FullWidthSection/FullWidt
 import { ServiceTabsSectionType } from '../../components/ServiceTabsSection/ServiceTabsSection';
 import { HeroTwoColumnImageType } from '../../components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
 import { LogoCarouselSectionType } from '../../components/LogoCarouselSection/LogoCarouselSection';
+import { TwoColumnImageSectionType } from '../../components/TwoColumnImageSection/TwoColumnImageSection';
+
 
 
 export const heroData: HeroTwoColumnImageType = {
@@ -199,7 +201,7 @@ export const logoCarouselSectionData : LogoCarouselSectionType = {
     ]
 } 
 
-export const twoColumnImageSectionData : FullWidthSectionType = {
+export const twoColumnImageSectionData : TwoColumnImageSectionType = {
     settings:{
         topSpacing:"Medium",
         bottomSpacing:"Medium",
@@ -213,8 +215,14 @@ export const twoColumnImageSectionData : FullWidthSectionType = {
         title:"Test CTA",
         openInNewWindow:false
     },
-    image:{
-        url:"/images/hayward-brands.png",
-        altText:"alt text"
-    }
+    images:[
+        {
+            url:"/images/hayward-brands.png",
+            altText:"alt text"
+        },
+        {
+            url:"/images/jandy-brands.png",
+            altText:"alt text2"
+        },
+]
 } 
