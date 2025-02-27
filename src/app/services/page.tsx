@@ -6,7 +6,6 @@ import { FullWidthSection } from '../../../components/FullWidthSection';
 import { LogoCarouselSection } from '../../../components/LogoCarouselSection';
 import { TwoColumnImageSection } from '../../../components/TwoColumnImageSection';
 
-
 export default function Home() {
   return (
     <>

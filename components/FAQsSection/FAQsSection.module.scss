@@ -1,0 +1,147 @@
+@import '../../styles/variables.scss';
+
+.root{
+    &:global(.bgGrey){
+        .buttonWrapper{
+            &.activeButton{
+                background-color:$color-secondary-blue;
+                .faqButton{
+                    color:$color-white;
+                }
+                .buttonToggle{
+                    &:after{
+                        background-color: $color-white;
+                    }
+                }
+            }
+        }
+        
+    }
+    .row{
+        display:flex;
+        flex-direction: column;
+        @media (width >= $bp-md) {
+            flex-direction: row;
+        }
+    }
+    .header,
+    .description{
+        text-align:center;
+        padding:0 30px;
+        @media (width >= $bp-md) {
+            padding:0 60px;
+        }
+    }
+    .faqsContainer{
+        margin:15px 0;
+        @media (width >= $bp-md) {
+            margin:30px 0;
+        }
+    }
+    .faqWrapper{
+        width:100%;
+        @media (width >= $bp-sm) {
+            width: min(80vw, $bp-lg);
+        }
+        margin:0 auto;
+    }
+    .faqQuestion{
+        margin: 0 40px 0 0;
+        @media (width >= $bp-md) {
+            margin: 0 80px 0 0;
+        }
+    }
+    .faqButton{
+        border:none;
+        background-color: transparent;
+        font-weight:500;
+        font-family:$primary-font;
+        color:$color-primary-blue;
+        text-align:left;
+        padding:15px;
+        width:100%;
+        cursor: pointer;
+        @media (width >= $bp-lg) {
+            padding:25px;
+        }
+    }
+    .buttonWrapper{
+        margin: 10px 0;
+        border: 1px solid $color-grey;
+        background-color: $color-white;
+        border-radius: 10px;
+        position:relative;
+        transition:0.3s background-color;
+        &.activeButton{
+            background-color:$color-grey;
+            // background-color:$color-turquoise;
+            .faqButton{
+                padding:0;
+                padding:15px;
+                @media (width >= $bp-lg) {
+                    padding:25px;
+                }
+            }
+            .faqAnswer{
+                    padding-top: 10px;
+                    max-height:800px;
+                    @media (width >= $bp-lg) {
+                        max-height:500px;
+                    }
+
+            }
+            .buttonToggle{
+                &:before{
+                    display:none;
+                }
+            }
+            
+        }
+    }
+    .faqAnswer{
+        font-family:$primary-font;
+        max-height:0;
+        overflow:hidden;
+        transition:0.3s;
+        p:first-of-type{
+            margin-top:5px;
+        }
+        p:last-of-type{
+            margin-bottom:0;
+        }
+    }
+    .buttonToggle{
+        position:absolute;
+        top:18px;
+        right:20px;
+        height:20px;
+        width:20px;
+        @media (width >= $bp-lg) {
+            top:30px;
+            right:50px;
+        }
+        &:before{
+            content:"";
+            background-color:$color-secondary-blue;
+            position: absolute;
+            display: block;
+            height: 20px;
+            margin-top: -10px;
+            top: 10px;
+            left: 9px;
+            right: 9px;
+        }
+        &:after{
+            content:"";
+            background-color:$color-secondary-blue;
+            position: absolute;
+            display: block;
+            height: 20px;
+            margin-top: -10px;
+            top: 10px;
+            left: 9px;
+            right: 9px;
+            transform: rotate(90deg);
+        }
+    }
+}
