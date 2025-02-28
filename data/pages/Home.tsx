@@ -3,6 +3,7 @@ import { ServiceTabsSectionType } from '../../components/ServiceTabsSection/Serv
 import { HeroTwoColumnImageType } from '../../components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
 import { LogoCarouselSectionType } from '../../components/LogoCarouselSection/LogoCarouselSection';
 import { TwoColumnImageSectionType } from '../../components/TwoColumnImageSection/TwoColumnImageSection';
+import { FAQsSectionType } from '../../components/FAQsSection/FAQsSection';
 
 
 
@@ -224,5 +225,51 @@ export const twoColumnImageSectionData : TwoColumnImageSectionType = {
             url:"/images/jandy-brands.png",
             altText:"alt text2"
         },
-]
+    ]
+} 
+
+export const faqsSectionData : FAQsSectionType = {
+    settings:{
+        topSpacing:"Medium",
+        bottomSpacing:"Medium",
+        // backgroundColor:"Blue",
+        contentAlignment:"Center",
+    },
+    header:"this is a header. this is a header. ",
+    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    faqs:[
+        {
+            question:"This is a question? This is a question? This is a question? This is a question?",
+            answer:"This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+        {
+            question:"1This is a question? This is a question? This is a question? This is a question?",
+            answer:"1This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+        {
+            question:"2This is a question? This is a question? This is a question? This is a question?",
+            answer:"2This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+        {
+            question:"3This is a question? This is a question? This is a question? This is a question?",
+            answer:"3This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+        {
+            question:"4This is a question? This is a question? This is a question? This is a question?",
+            answer:"4This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+        {
+            question:"5This is a question? This is a question? This is a question? This is a question?",
+            answer:"5This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+        {
+            question:"6This is a question? This is a question? This is a question? This is a question?",
+            answer:"6This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+        {
+            question:"7This is a question? This is a question? This is a question? This is a question?",
+            answer:"7This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+        },
+
+    ]
 } 

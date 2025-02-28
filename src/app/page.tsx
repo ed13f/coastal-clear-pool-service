@@ -1,10 +1,11 @@
-import { heroData, serviceTabsData, fullWidthSectionData, logoCarouselSectionData, twoColumnImageSectionData } from '../../data/pages/Home';
+import { heroData, serviceTabsData, fullWidthSectionData, logoCarouselSectionData, twoColumnImageSectionData, faqsSectionData } from '../../data/pages/Home';
 
 import { HeroSection } from '../../components/HeroSection';
 import { ServiceTabsSection } from '../../components/ServiceTabsSection';
 import { FullWidthSection } from '../../components/FullWidthSection';
 import { LogoCarouselSection } from '../../components/LogoCarouselSection';
 import { TwoColumnImageSection } from '../../components/TwoColumnImageSection';
+import { FAQsSection } from '../../components/FAQsSection';
 
 
 export default function Home() {
@@ -37,6 +38,12 @@ export default function Home() {
         description={twoColumnImageSectionData.description}
         images={twoColumnImageSectionData.images}
         cta={twoColumnImageSectionData.cta}
+      />
+      <FAQsSection
+        settings={faqsSectionData.settings}
+        header={faqsSectionData.header}
+        description={faqsSectionData.description}
+        faqs={faqsSectionData.faqs}
       />
     </>
   );
