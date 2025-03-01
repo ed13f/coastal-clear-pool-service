@@ -5,15 +5,39 @@ import Image from 'next/image';
 
 import styles from './Header.module.scss';
 import headerData from '../../data/header/navigation';
-  export function Header({ header}: {header: any}) {
-  const [buttonFocused, setButtonFocus] = useState<boolean>(false);
-    const buttonReference = useRef<HTMLButtonElement>(null);
 
-  const [getHeader, setHeader] = useState(header);
+export type HeaderType = {
+  logo:{
+    url:string;
+    altText:string;
+  };
+  primaryNav:{
+      settings:{
+          hasSubMenu:boolean;
+      };
+      topLevelLink:{
+          text:string;
+          link:string;
+          targetBlank:boolean;
+          addCtaStyle:boolean;
+      }
+      subNav?:{
+          header:string;
+          dropdownItems:{
+              text:string;
+              link:string;
+              targetBlank:boolean;
+          }[]
+      }
+  }[]
+}
+
+export function Header({ header}: {header: HeaderType}) {
+  // const [buttonFocused, setButtonFocus] = useState<boolean>(false);
+  //   const buttonReference = useRef<HTMLButtonElement>(null);
+
   const [activebutton, setActivebutton] = useState('-1');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [announcementBarOpen, setAnnouncementBarOpen] = useState(true);
-  const [isAnnouncementBarMounted, setAnnouncementBarMounted] = useState(false);
 
   const toggleSubMenuDisplay = (event:React.MouseEvent<HTMLButtonElement>) => {
     let dataAttributes = event.currentTarget.dataset;
@@ -37,13 +61,6 @@ import headerData from '../../data/header/navigation';
     setActivebutton('-1');
   };
 
-  const resetAnnouncementBar = () => {
-    sessionStorage.setItem('displayBanner', 'true');
-    setAnnouncementBarOpen(false);
-    setTimeout(function() {
-      setAnnouncementBarMounted(false);
-    }, 500);
-  };
 
   const createUniqueItemKey = (item:any) => {
     let uniqueID = "";
@@ -87,24 +104,6 @@ import headerData from '../../data/header/navigation';
     };
   }, [mobileMenuOpen]);
 
-  useEffect(() => {
-    /* Read local storage variable to conditionally hide the announcement bar */
-    const isClosed = Boolean(sessionStorage.getItem('displayBanner'));
-    setAnnouncementBarMounted(!isClosed);
-
-    /* Hides the announcement bar on scroll */
-    const handleScroll = () => {
-        if(!isAnnouncementBarMounted && scrollY >= 1){
-          setAnnouncementBarOpen(false);
-        } else if(!isAnnouncementBarMounted && scrollY < 1){
-          setAnnouncementBarOpen(true);
-        }
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-        window.removeEventListener('scroll', handleScroll)
-    }
-  }, []);
   return (
     <header className={`header ${styles.root}`}>
       {/*  -- Primary Navigation 1 -- */}
