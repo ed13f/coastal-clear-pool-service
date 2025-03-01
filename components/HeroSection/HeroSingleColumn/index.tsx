@@ -1,0 +1,1 @@
+export { HeroSingleColumn } from './HeroSingleColumn';

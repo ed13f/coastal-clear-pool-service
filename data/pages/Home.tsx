@@ -1,17 +1,18 @@
 import { FullWidthSectionType } from '../../components/FullWidthSection/FullWidthSection';
 import { ServiceTabsSectionType } from '../../components/ServiceTabsSection/ServiceTabsSection';
 import { HeroTwoColumnImageType } from '../../components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
+import { HeroSingleColumnType } from '../../components/HeroSection/HeroSingleColumn/HeroSingleColumn';
 import { LogoCarouselSectionType } from '../../components/LogoCarouselSection/LogoCarouselSection';
 import { TwoColumnImageSectionType } from '../../components/TwoColumnImageSection/TwoColumnImageSection';
 import { FAQsSectionType } from '../../components/FAQsSection/FAQsSection';
 
 
 
-export const heroData: HeroTwoColumnImageType = {
+export const heroData: HeroTwoColumnImageType | HeroSingleColumnType = {
     settings:{
         topSpacing:"Medium",
         bottomSpacing:"Medium",
-        heroType: "Two Column (Image)",
+        heroType: "Single Column",
     },
     header:"this is a header. this is a header. ",
     description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
