@@ -45,11 +45,13 @@
     }
     .logoWrapper{
         width: 120px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        margin:10px 20px;
+        // margin-top: 15px;
+        // margin-bottom: 15px;
+        // margin:10px 20px;
+        margin:10px 0 10px 15px;
         @media (width >= $bp-lg) {
-            margin:15px 10px;
+            // margin:15px 10px;
+            margin:10px 0 10px 30px;
             width: 140px;
         }
     }
@@ -110,6 +112,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-right:30px
             // padding-left:10px;
             // padding-right:10px;
         }
@@ -165,6 +168,9 @@
         transition:0.3s padding-bottom;
         &:last-of-type{
             border-bottom:none;
+            @media (width >= $bp-lg) {
+                padding-right:0;
+            }
         }
         @media (width >= $bp-lg) {
             padding: 0 5px;
@@ -290,7 +296,7 @@
         transition: 0.2s border-color;
         display:block;
         @media (width >= $bp-lg) {
-            font-size:18px;
+            font-size:20px;
             padding: 4px 10px !important;
         }
     }
@@ -323,7 +329,7 @@
         width:calc(100% + 40px);
         pointer-events:none;
         @media (width >= $bp-lg) {
-            box-shadow: 0 3px 3px rgba(10,36,23,.1);
+            box-shadow: 0 3px 3px rgba(10,36,23,.5);
             position:absolute;
             padding-top: 20px;
             width: max-content;

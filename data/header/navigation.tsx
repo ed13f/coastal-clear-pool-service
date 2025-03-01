@@ -1,4 +1,6 @@
-const navigation = {
+import { HeaderType } from '../../components/Header/header';
+
+const navigation:HeaderType = {
         'logo':{
             'url':'/images/coastal-clear-logo.png',
             'altText':''
