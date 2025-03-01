@@ -1,0 +1,109 @@
+@import '../../../styles/variables.scss';
+
+section.hero.singleColumn{
+    margin-top:0;
+    margin-bottom:0;
+    padding-top:30px;
+    padding-bottom:30px;
+    @media (width >= $bp-lg) {
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+    text-align:center;
+    position:relative;
+    &.headerTextSmall{
+        h1{
+            font-size: 24px;
+            line-height: 30px;
+            @media (width >= $bp-lg) {
+                font-size: 40px;
+                line-height: 54px;
+            }
+        }
+    }
+    &.headerTextLarge{
+        h1{
+            font-size: 30px;
+            line-height: 40px;
+            @media (width >= $bp-md) {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            @media (width >= $bp-lg) {
+                font-size: 80px;
+                line-height: 90px;
+            }
+        }
+    }
+    &.solsticeRingBlue,
+    &.solsticeRingGreen{
+        overflow:hidden;
+        padding-bottom:120px;
+        margin-bottom:30px;
+        @media (width >= $bp-lg) {
+            padding-bottom:calc(20vw);
+        }
+        @media (width >= $bp-xl) {
+            padding-bottom:280px;
+            margin-bottom:60px;
+        }
+        &:after{
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: "";
+            position: absolute;
+            bottom:0;
+            height: 800px;
+            left: calc(50% - 400px);
+            bottom: 0;
+            width: 800px;
+            z-index: 0;
+            @media (width >= $bp-lg) {
+                height: calc(100vw - 60px);
+                left:30px;
+                bottom: 0;
+                width: calc(100% - 60px);
+            }
+            @media (width >= $bp-xl) {
+                height: 1400px;
+                left: calc(50% - 700px);
+                bottom: 0;
+                width: 1400px;
+            }
+        }
+    } 
+    .contentWrapper{
+        max-width:100%;
+        margin:0 auto;
+        position:relative;
+        z-index:1;
+    }
+    .header{
+        // TODO - Revisite Sizing Here
+        strong{
+            font-size:40px;
+            line-height:50px;
+            display:block;
+            @media (width >= $bp-lg) {
+                font-size:60px;
+                line-height:70px;
+            }
+            @media (width >= $bp-xl) {
+                font-size:80px;
+                line-height:90px;
+            }
+        }
+    }
+    .description,
+    .description p,
+    .description a{
+        font-weight:400;
+        font-size: 16px;
+        line-height: 21px;
+        @media (width >= $bp-lg) {
+            font-size: 21px;
+            line-height: 28px;
+        }
+    }
+}

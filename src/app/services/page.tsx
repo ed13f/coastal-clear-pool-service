@@ -9,7 +9,13 @@ import { TwoColumnImageSection } from '../../../components/TwoColumnImageSection
 export default function Home() {
   return (
     <>
-      <HeroSection hero={heroData} />
+      <HeroSection 
+        settings={heroData.settings}
+        header={heroData.header}
+        description={heroData.description}
+        cta={heroData.cta}
+        image={heroData.image}
+        />
       <ServiceTabsSection 
         settings={serviceTabsData.settings}
         header={serviceTabsData.header}

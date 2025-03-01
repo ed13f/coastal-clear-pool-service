@@ -16,7 +16,7 @@ export type SettingsInput = {
   topSpacing?: 'Remove' | 'Small' | 'Medium' | 'Large' | undefined;
   bottomSpacing?: 'Remove' | 'Small' | 'Medium' | 'Large' | undefined;
   backgroundColor?: 'Grey' | 'Blue' | undefined;
-  heroType?:string;
+  heroType?: 'Two Column (Image)' | 'Single Column';
   contentAlignment?: 'Left' | 'Center' | 'Right' | undefined;
   maxWidth?: 'Small' | 'Medium' | 'Large' | undefined;
   fullWidthContainer?:boolean;

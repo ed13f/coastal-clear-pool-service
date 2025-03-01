@@ -40,13 +40,15 @@ export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: H
                             {header && <h1 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h1> }
                         </div>  
                         {description && <p className={`${styles.description} largeText`} dangerouslySetInnerHTML={{ __html: description }}></p> }
-                        <div className={`${styles.ctaWrapper}`}>
-                            <CTAButton cta={cta}></CTAButton>
-                        </div>
+                        {cta?.link && (
+                            <div className={`${styles.ctaWrapper}`}>
+                                <CTAButton cta={cta}></CTAButton>
+                            </div>
+                        )}
                     </div>
                 </div>
                 <div className={`col-12 col-md-6  order-1 order-md-2 ${styles.imageColumn}`}>
-                    {image.url && (
+                    {image && image.url && (
                         <div className={`imageBorderWrapper ${styles.imageWrapper}`}>
                                 <div className={`imageBorder ${styles.imageBorder}`}>
                                     <Image  priority={true} src={`${image.url}?auto=webp`} alt={image.altText} fill sizes="100%" style={{objectFit:"cover"}}/>
