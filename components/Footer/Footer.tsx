@@ -1,16 +1,21 @@
 import Style from './Footer.module.scss';
-import {Footer as FooterType } from '../../typescript/GlobalComponent'
+import footer from '../../data/footer';
 
-export const Footer = ({}:FooterType) => {
+export type FooterType = {
+  copyRight:string;
+  tagLine:string;
+}
+
+export const Footer = (FooterData:FooterType) => {
   return (
     <footer className={`${Style.footer}`}>
       <div className={`container`}>
         <div className={'row align-itmes-center gap-lg remove-margin'}>
             <div className={`col ${Style.leftColumm}`}>
-                <p className={`col ${Style.copyright}`}>Coastal Clear Pools &copy; {new Date().getFullYear()}</p>
+                <p className={`col ${Style.copyright}`}>{footer.copyRight} &copy; {new Date().getFullYear()}</p>
             </div>
             <div className={`col ${Style.rightColumm}`}>
-                <address className={`${Style.address}`}>Palm Beach County</address>
+                <div className={`${Style.address}`}>{footer.tagLine}</div>
             </div>
         </div>
       </div>

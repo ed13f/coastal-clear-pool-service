@@ -1,6 +1,3 @@
-export type Footer = any;
-export type Header = any;
-
 export type CTA = {
   link: string;
   title: string;
