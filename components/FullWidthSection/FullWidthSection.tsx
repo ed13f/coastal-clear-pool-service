@@ -27,8 +27,8 @@ export type FullWidthSectionType = {
     settings: SettingsInput;
     header:string;
     description:string;
-    cta: CTA;
-    image: ImageType;
+    cta?: CTA;
+    image?: ImageType;
 }
 
 export const FullWidthSection = ({ settings,header,description, cta, image }: FullWidthSectionType) => {
@@ -40,12 +40,12 @@ export const FullWidthSection = ({ settings,header,description, cta, image }: Fu
                     <div className={`contentWrapper`}>
                         {header &&  <h2 className={`header`} dangerouslySetInnerHTML={{ __html: header }}></h2> }
                         {description &&  <div className={`description`} dangerouslySetInnerHTML={{ __html: description }}></div> }
-                        {image.url && (
+                        {(image && image.url) && (
                             <div className={`${styles.imageWithBorder} imageBorder`}>
                                 <Image className={styles.featuredImage} src={`${image.url}?auto=webp`} alt={image.altText} width={900} height={500}/>
                             </div>
                         )}
-                        <div><CTAButton cta={cta}></CTAButton></div>
+                        { cta && <div><CTAButton cta={cta}></CTAButton></div> }
                     </div>
                 </div>
             </div>
