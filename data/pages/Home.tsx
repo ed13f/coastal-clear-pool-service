@@ -12,13 +12,13 @@ export const heroData: HeroTwoColumnImageType | HeroSingleColumnType = {
     settings:{
         topSpacing:"Medium",
         bottomSpacing:"Medium",
-        heroType: "Single Column",
+        heroType: "Two Column (Image)",
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    header:"Coastal Clear Pool Repair Service",
+    description: "Reliable pool repairs in Palm Beach County! We fix heaters, pumps, filters, and more—fast, affordable, and professional service guaranteed.",
     cta: {
-        link:"/home",
-        title:"Test CTA",
+        link:"/contact-us",
+        title:"Contact Us Today",
         openInNewWindow:false
     },
     image:{
@@ -32,8 +32,8 @@ export const serviceTabsData: ServiceTabsSectionType = {
         topSpacing:"Medium",
         bottomSpacing:"Medium",
     },
-    header:"this is a header. this is a header.",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    header:"Explore the range of services we provide.",
+    description: "Expert pool repair services to keep your pool in top condition. We provide reliable, professional solutions for all your pool needs in Palm Beach.",
     cards:[
         {
             tab:{
@@ -41,19 +41,19 @@ export const serviceTabsData: ServiceTabsSectionType = {
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"this is a sub header",
-                intro:"This is an intro"
+                header:"Pool Renovations",
+                intro:""
             },
             card:{
                 image:{
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"this is a sub header",
-                description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+                header:"Make your pool look brand-new again",
+                description: "Transform your pool with expert renovations! From resurfacing and new tile to upgraded decking and lighting, we restore beauty and functionality. Enjoy a modern, refreshed pool with our professional Palm Beach County services!",
                 cta: {
-                    link:"/test-2",
-                    title:"Test 2",
+                    link:"/services/pool-renovations",
+                    title:"View All Pool Renovations",
                     openInNewWindow:false
                 },
             }
@@ -64,19 +64,19 @@ export const serviceTabsData: ServiceTabsSectionType = {
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"2this is a sub header",
-                intro:"2This is an intro"
+                header:"Pool Equipment Repairs",
+                intro:""
             },
             card:{
                 image:{
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"2 this is a sub header",
-                description: "2 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+                header:"Uninterrupted pool days with dependable equipment repairs.",
+                description: "Keep your pool running smoothly with expert equipment repairs! We fix pumps, filters, heaters, and more to ensure optimal performance. Reliable service to keep your pool clean and efficient!",
                 cta: {
                     link:"/test-2",
-                    title:"Test 2",
+                    title:"View All Equipment Repairs",
                     openInNewWindow:false
                 },
             }
@@ -87,16 +87,16 @@ export const serviceTabsData: ServiceTabsSectionType = {
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"3this is a sub header",
-                intro:"3This is an intro"
+                header:"Pool Heaters",
+                intro:""
             },
             card:{
                 image:{
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"3 this is a sub header",
-                description: "3 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+                header:"Reliable Pool Heater Services for Year-Round Comfort",
+                description: "Stay comfortable year-round with our expert pool heater services. We offer installation, repairs, and maintenance to ensure efficient heating, so you can enjoy your pool in any season.",
                 cta: {
                     link:"/test-3",
                     title:"Test 3",
@@ -110,19 +110,19 @@ export const serviceTabsData: ServiceTabsSectionType = {
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"4this is a sub header",
-                intro:"4This is an intro"
+                header:"Power Washing",
+                intro:""
             },
             card:{
                 image:{
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"4 this is a sub header",
-                description: "4 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+                header:"Restore & Refresh with Expert Power Washing",
+                description: "Revitalize your surfaces with our professional power washing services. We remove dirt, grime, and stains from driveways, patios, and pool decks, restoring their original beauty with safe and effective cleaning techniques.",
                 cta: {
                     link:"/test-4",
-                    title:"Test 4",
+                    title:"View Power washing service",
                     openInNewWindow:false
                 },
             }
@@ -132,22 +132,22 @@ export const serviceTabsData: ServiceTabsSectionType = {
 
 export const fullWidthSectionData : FullWidthSectionType = {
     settings:{
-        // topSpacing:"Small",
-        // bottomSpacing:"Small",
-        backgroundColor:"Blue",
+        topSpacing:"Small",
+        bottomSpacing:"Medium",
+        // backgroundColor:"white",
         contentAlignment:"Center",
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    header:"Family-owned and operated since 2020.",
+    description: "We are a proud family-owned business serving Palm Beach County with dedication and expertise. Committed to quality service and customer satisfaction, we treat every project with care, ensuring reliable solutions and a personal touch for our community.",
     cta: {
         link:"/home",
-        title:"Test CTA",
+        title:"Learn more about us",
         openInNewWindow:false
     },
-    image:{
-        url:"/images/hayward-brands.png",
-        altText:"alt text"
-    }
+    // image:{
+    //     url:"/images/hayward-brands.png",
+    //     altText:"alt text"
+    // }
 } 
 
 export const logoCarouselSectionData : LogoCarouselSectionType = {
@@ -160,11 +160,11 @@ export const logoCarouselSectionData : LogoCarouselSectionType = {
         displayBackgroundSquare:true,
         maxWidth:'Medium'
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    header:"Trusted Brands We Service and Maintain",
+    description: "Explore the trusted brands we service, showcasing our expertise and commitment to quality. We proudly maintain and repair top-tier pool equipment, ensuring reliable performance and customer satisfaction for every project we undertake.",
     cta: {
         link:"/home",
-        title:"Test CTA",
+        title:"Check out our services",
         openInNewWindow:false
     },
     logos:[
@@ -210,11 +210,11 @@ export const twoColumnImageSectionData : TwoColumnImageSectionType = {
         backgroundColor:"Grey",
         contentAlignment:"Center",
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    header:"Take a Look at Our Work",
+    description: "Browse our showcased projects, highlighting our expertise in pool repairs, renovations, and equipment services. Questioning if we are the right people to help? Check out Frequently asked questions by our customers.",
     cta: {
         link:"/home",
-        title:"Test CTA",
+        title:"Check out FAQs",
         openInNewWindow:false
     },
     images:[
@@ -229,48 +229,48 @@ export const twoColumnImageSectionData : TwoColumnImageSectionType = {
     ]
 } 
 
-export const faqsSectionData : FAQsSectionType = {
-    settings:{
-        topSpacing:"Medium",
-        bottomSpacing:"Medium",
-        // backgroundColor:"Blue",
-        contentAlignment:"Center",
-    },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    faqs:[
-        {
-            question:"This is a question? This is a question? This is a question? This is a question?",
-            answer:"This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
-        {
-            question:"1This is a question? This is a question? This is a question? This is a question?",
-            answer:"1This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
-        {
-            question:"2This is a question? This is a question? This is a question? This is a question?",
-            answer:"2This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
-        {
-            question:"3This is a question? This is a question? This is a question? This is a question?",
-            answer:"3This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
-        {
-            question:"4This is a question? This is a question? This is a question? This is a question?",
-            answer:"4This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
-        {
-            question:"5This is a question? This is a question? This is a question? This is a question?",
-            answer:"5This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
-        {
-            question:"6This is a question? This is a question? This is a question? This is a question?",
-            answer:"6This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
-        {
-            question:"7This is a question? This is a question? This is a question? This is a question?",
-            answer:"7This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
-        },
+// export const faqsSectionData : FAQsSectionType = {
+//     settings:{
+//         topSpacing:"Medium",
+//         bottomSpacing:"Medium",
+//         // backgroundColor:"Blue",
+//         contentAlignment:"Center",
+//     },
+//     header:"this is a header. this is a header. ",
+//     description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+//     faqs:[
+//         {
+//             question:"This is a question? This is a question? This is a question? This is a question?",
+//             answer:"This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
+//         {
+//             question:"1This is a question? This is a question? This is a question? This is a question?",
+//             answer:"1This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
+//         {
+//             question:"2This is a question? This is a question? This is a question? This is a question?",
+//             answer:"2This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
+//         {
+//             question:"3This is a question? This is a question? This is a question? This is a question?",
+//             answer:"3This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
+//         {
+//             question:"4This is a question? This is a question? This is a question? This is a question?",
+//             answer:"4This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
+//         {
+//             question:"5This is a question? This is a question? This is a question? This is a question?",
+//             answer:"5This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
+//         {
+//             question:"6This is a question? This is a question? This is a question? This is a question?",
+//             answer:"6This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
+//         {
+//             question:"7This is a question? This is a question? This is a question? This is a question?",
+//             answer:"7This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer. This is an answer."
+//         },
 
-    ]
-} 
+//     ]
+// } 

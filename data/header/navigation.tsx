@@ -46,8 +46,8 @@ const navigation:HeaderType = {
                             'targetBlank': false,
                         },
                         {
-                            'text': 'Pool Resurfacing',
-                            'link': "/services/pool-resurfacing",
+                            'text': 'Pool Equipment Repairs',
+                            'link': "/services/pool-equipment-repair",
                             'targetBlank': false,
                         },
                         {
