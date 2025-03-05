@@ -22,8 +22,8 @@ export type HeroSingleColumnType = {
     settings: SettingsInput;
     header:string;
     description:string;
-    cta:CTAType;
-    image: Image
+    cta?:CTAType;
+    image?: Image
 }
 
 export const HeroSingleColumn = ({ settings, header, description, cta }: HeroSingleColumnType) => {
@@ -35,7 +35,7 @@ export const HeroSingleColumn = ({ settings, header, description, cta }: HeroSin
                     <div className={`${styles.contentWrapper} contentWrapper`} >
                         {header &&  <h1 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h1> }
                         {description &&  <div className={` ${styles.description}`} dangerouslySetInnerHTML={{ __html: description }}></div> }
-                        <CTAButton cta={cta}></CTAButton>
+                       {cta && <CTAButton cta={cta}></CTAButton> }
                     </div>
                 </div>
             </div>

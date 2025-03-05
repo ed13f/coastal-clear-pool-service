@@ -25,8 +25,8 @@ export type HeroTwoColumnImageType = {
     settings: SettingsInput;
     header:string;
     description:string;
-    cta:CTAType;
-    image: ImageType;
+    cta?:CTAType;
+    image?: ImageType;
 }
 
 export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: HeroTwoColumnImageType) => {
@@ -37,7 +37,7 @@ export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: H
                 <div className={`col-12 col-md-6 order-2 order-md-1`}>
                     <div className={`${styles.contentWrapper}`}>
                         <div className={styles.headerWrapper}>
-                            {header && <h1 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h1> }
+                            {header && <h1 className={`${styles.header} rico`} dangerouslySetInnerHTML={{ __html: header }}></h1> }
                         </div>  
                         {description && <p className={`${styles.description} largeText`} dangerouslySetInnerHTML={{ __html: description }}></p> }
                         {cta?.link && (

@@ -36,16 +36,6 @@ const navigation:HeaderType = {
                             'targetBlank': false,
                         },
                         {
-                            'text': 'Pool Heaters',
-                            'link': "/services/pool-heater",
-                            'targetBlank': false,
-                        },
-                        {
-                            'text': 'Power Washing',
-                            'link': "/services/power-washing",
-                            'targetBlank': false,
-                        },
-                        {
                             'text': 'Pool Equipment Repairs',
                             'link': "/services/pool-equipment-repair",
                             'targetBlank': false,
@@ -55,6 +45,16 @@ const navigation:HeaderType = {
                             'link': "/services/pool-renovations",
                             'targetBlank': false,
                         },
+                        {
+                            'text': 'Pool Heaters',
+                            'link': "/services/pool-heaters",
+                            'targetBlank': false,
+                        },
+                        {
+                            'text': 'Power Washing',
+                            'link': "/services/power-washing",
+                            'targetBlank': false,
+                        }
                     ]
                 }
             },
