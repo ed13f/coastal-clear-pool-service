@@ -45,7 +45,7 @@ export const FullWidthSection = ({ settings,header,description, cta, image }: Fu
                                 <Image className={styles.featuredImage} src={`${image.url}?auto=webp`} alt={image.altText} width={900} height={500}/>
                             </div>
                         )}
-                        { cta && <div><CTAButton cta={cta}></CTAButton></div> }
+                        { cta && <div className={`cta-wrapper`}><CTAButton cta={cta}></CTAButton></div> }
                     </div>
                 </div>
             </div>

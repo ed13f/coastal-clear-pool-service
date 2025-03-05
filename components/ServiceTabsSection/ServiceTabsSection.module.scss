@@ -10,35 +10,27 @@
     .header{
         margin-top:0;
         font-size: 30px;
-        line-height: 40px;
         @media (width >= $bp-lg) {
             font-size: 40px;
-            line-height: 48px;
         }
         @media (width >= $bp-xl) {
             font-size: 50px;
-            line-height: 60px;
         }
         @media (width >= $bp-xxl) {
             font-size: 60px;
-            line-height: 70px;
         }
     }
     .description{
         font-size:18px;
-        line-height:24px;
         font-weight:400;
         @media (width >= $bp-lg) {
             font-size:24px;
-            line-height:30px;
         }
         @media (width >= $bp-xl) {
             font-size:25px;
-            line-height:33px;
         }
         @media (width >= $bp-xxl) {
             font-size:30px;
-            line-height:40px;
         }
     }
     .cardsWrapper{
@@ -225,27 +217,22 @@
     }
     .cardHeader{
         font-size:16px;
-        line-height:22px;
         margin:5px 0;
         transition: all 0.3s;
         font-family: $primary-font;
         font-weight:600;
         @media (width >= $bp-lg) {
             font-size:20px;
-            line-height:26px;
         }
         @media (width >= $bp-xl) {
             font-size:24px;
-            line-height:28px;
         }
     }
     .cardDescription{
         font-size:14px;
-        line-height:18px;
         transition: all 0.3s;
         @media (width >= $bp-xl) {
             font-size:18px;
-            line-height:21px;
         }
     }
     .expandedInfoWrapper{
@@ -282,12 +269,14 @@
         }
     }
     .expandedInfoDescription{
+        font-size: 18px;
+        @media (width >= $bp-lg) {
+            font-size: 20px;
+        }
         p{
             font-size: 16px;
-                line-height: 20px;
             @media (width >= $bp-lg) {
                 font-size: 18px;
-                line-height: 24px;
             }
         }
         & > *:last-of-type{
@@ -295,7 +284,10 @@
         }
     }
     .expandedInfoCTAWrapper{
-        margin-top:5px;
+        margin-top:15px;
+        @media (width >= $bp-lg) {
+            margin-top:20px;
+        }
     }
     .expandedInfoImageColumn{
         flex:1;
@@ -455,13 +447,11 @@
         font-family: $primary-font;
         font-weight:600;
         font-size:18px;
-        line-height:24px;
     }
     .mobileTabIntro{
         margin-top:10px;
         margin-bottom:0;
         font-size:16px;
-        line-height:22px;
         font-weight:400;
     }
     .mobileExpandedInfoHeader{
@@ -472,11 +462,9 @@
     .mobileExpandedInfoDescription{
         p{
             font-size: 16px;
-            line-height: 20px;
             font-weight:400;
             @media (width >= $bp-lg) {
                 font-size: 18px;
-                line-height: 24px;
             }
         }
         & > *:last-of-type{
