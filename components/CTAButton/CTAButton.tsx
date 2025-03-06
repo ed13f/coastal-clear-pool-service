@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { CTA } from '../../typescript/GlobalComponent';
 
 type CTAComponent = {
-  cta:CTA
+  cta?:CTA
 };
 
 const renderCTA = ( cta: CTA) => {
@@ -19,7 +19,7 @@ const renderCTA = ( cta: CTA) => {
 export const CTAButton = ( { cta } : CTAComponent) => {
   return (
     <>
-      {renderCTA(cta)}
+      {cta && renderCTA(cta)}
     </>
   );
 }
