@@ -1,4 +1,4 @@
-import { heroData, serviceTabsData, fullWidthSectionData, twoColumnImageSectionData } from '../../../../data/pages/services/pool-heaters';
+import { heroData, serviceTabsData, fullWidthSectionData } from '../../../../data/pages/services/pool-heaters';
 
 import { HeroSection } from '../../../../components/HeroSection';
 import { ServiceTabsSection } from '../../../../components/ServiceTabsSection';
