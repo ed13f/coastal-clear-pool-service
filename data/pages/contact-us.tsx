@@ -19,16 +19,24 @@ export const twoColumnImageSectionData : TwoColumnImageSectionType = {
         // backgroundColor:"Grey",
         contentAlignment:"Center",
     },
-    header:"Check out some of our pool heater projects",
-    description: "Providing professional pool heater services in Palm Beach County since 2020.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
+    header:"Service Hours of Operation",
+    description: `
+        <p>Coastal Clear Pool Repair operates Monday through Friday from 9:00 AM to 5:00 PM. Call for a free estimate today!<p>
+        <ul>
+        <li>Phone: <a href"tel:15613333333"=>(561)-333-3333</a></li>
+        <li>Email: <a href"mail:service@coastalclearpoolrepair.com"=>service@coastalclearpoolrepair.com</a></li>
+        <li>Emergency service available after hours</li>
+        </ul>
+    
+    `,
+    // cta: {
+    //     link:"/home",
+    //     title:"Test CTA",
+    //     openInNewWindow:false
+    // },
     images:[
         {
-            url:"/images/hayward-brands.png",
+            url:"/images/pool-contact-us-page.jpg",
             altText:"alt text"
         },
 ]
