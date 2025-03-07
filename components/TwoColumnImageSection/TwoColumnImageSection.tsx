@@ -31,7 +31,7 @@ export type TwoColumnImageSectionType = {
     settings: SettingsInput;
     header:string;
     description:string;
-    cta:CTA;
+    cta?:CTA;
     images:ImageType[];
   }
 
