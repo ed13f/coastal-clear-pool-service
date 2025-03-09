@@ -41,8 +41,8 @@ const navigation:HeaderType = {
                             'targetBlank': false,
                         },
                         {
-                            'text': 'Pool Renovations',
-                            'link': "/services/pool-renovations",
+                            'text': 'Pool Remodeling',
+                            'link': "/services/pool-remodeling",
                             'targetBlank': false,
                         },
                         {

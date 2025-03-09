@@ -12,217 +12,91 @@ export const heroData: HeroTwoColumnImageType = {
         bottomSpacing:"Medium",
         heroType: "Two Column (Image)",
     },
-    header:"Pool Remodeling ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
+    header:"Expert Pool Renovation Services",
+    description: "Revitalize your pool with our expert renovation services, enhancing its design, functionality, and value for a refreshing, modern experience.",
+    // cta: {
+    //     link:"/home",
+    //     title:"Test CTA",
+    //     openInNewWindow:false
+    // },
     image:{
-        url:"/images/hayward-brands.png",
+        url:"/images/pool-remodel-hero.jpg",
         altText:"alt text"
     }
-}
-
-export const serviceTabsData: ServiceTabsSectionType = {
-    settings:{
-        topSpacing:"Medium",
-        bottomSpacing:"Medium",
-    },
-    header:"this is a header. this is a header.",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cards:[
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"this is a sub header",
-                intro:"This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"this is a sub header",
-                description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-2",
-                    title:"Test 2",
-                    openInNewWindow:false
-                },
-            }
-        },
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"2this is a sub header",
-                intro:"2This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"2 this is a sub header",
-                description: "2 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-2",
-                    title:"Test 2",
-                    openInNewWindow:false
-                },
-            }
-        },
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"3this is a sub header",
-                intro:"3This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"3 this is a sub header",
-                description: "3 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-3",
-                    title:"Test 3",
-                    openInNewWindow:false
-                },
-            }
-        },
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"4this is a sub header",
-                intro:"4This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"4 this is a sub header",
-                description: "4 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-4",
-                    title:"Test 4",
-                    openInNewWindow:false
-                },
-            }
-        }
-    ]
 }
 
 export const fullWidthSectionData : FullWidthSectionType = {
     settings:{
         // topSpacing:"Small",
         // bottomSpacing:"Small",
-        backgroundColor:"Blue",
+        // backgroundColor:"Blue",
         contentAlignment:"Center",
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    image:{
-        url:"/images/hayward-brands.png",
-        altText:"alt text"
-    }
+    header:"Transform Your Pool Today",
+    description: "Revamp your pool with our professional renovation services. Whether you want to refresh the design, enhance functionality, or increase safety, we offer personalized solutions that meet your specific needs. Design the ultimate pool oasis that fits your home and lifestyle.",
 } 
 
-export const logoCarouselSectionData : LogoCarouselSectionType = {
+export const serviceTabsData: ServiceTabsSectionType = {
     settings:{
-        
         topSpacing:"Medium",
         bottomSpacing:"Medium",
-        contentAlignment:"Center",
-        fullWidthContainer:true,
-        displayBackgroundSquare:true,
-        maxWidth:'Medium'
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    logos:[
+    header:"View Our Pool Renovation Services",
+    description: "Explore our pool renovation services to enhance your pool’s design, functionality, and safety, creating a perfect outdoor retreat.",
+    cards:[
         {
-            url:"/images/hayward-brands.png",
-            altText:"alt text1"
+            tab:{
+                image:{
+                    url:"/images/pool-resurfacing-image.jpg",
+                    altText:"alt text"
+                },
+                header:"Pool Resurfacing",
+                intro:""
+            },
+            card:{
+                image:{
+                    url:"/images/pool-resurfacing-image.jpg",
+                    altText:"alt text"
+                },
+                header:"High-Quality Pool Resurfacing Services",
+                description: "Our high-quality pool resurfacing services restore the beauty and durability of your pool. We use top-grade materials to repair cracks, smooth surfaces, and enhance the overall appearance, ensuring your pool remains attractive, functional, and safe for years to come.",
+            }
         },
         {
-            url:"/images/hayward-brands.png",
-            altText:"alt text2"
+            tab:{
+                image:{
+                    url:"/images/pool-aujtomation-service-image.jpg",
+                    altText:"alt text"
+                },
+                header:"Automation Control System",
+                intro:""
+            },
+            card:{
+                image:{
+                    url:"/images/pool-aujtomation-service-image.jpg",
+                    altText:"alt text"
+                },
+                header:"Advanced Pool Automation Control Systems",
+                description: "Our advanced pool automation control systems provide seamless management of your pool’s functions, including lighting, heating, cleaning, and filtration. Control everything effortlessly from your smartphone or tablet, enhancing convenience, energy efficiency, and overall enjoyment of your pool experience.",
+            }
         },
         {
-            url:"/images/hayward-brands.png",
-            altText:"alt text3"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text4"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text5"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text6"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text7"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text8"
-        },
+            tab:{
+                image:{
+                    url:"/images/new-tile-coping-mage.jpg",
+                    altText:"alt text"
+                },
+                header:"New Tile and Coping",
+                intro:""
+            },
+            card:{
+                image:{
+                    url:"/images/new-tile-coping-mage.jpg",
+                    altText:"alt text"
+                },
+                header:"Premium Pool Tile and Coping Installation",
+                description: "Our premium pool tile and coping installation services enhance the aesthetic appeal and durability of your pool. We offer a wide selection of high-quality tiles and coping materials, ensuring a customized look that complements your style while improving your pool's longevity.",
+            }
+        }
     ]
-} 
-
-export const twoColumnImageSectionData : TwoColumnImageSectionType = {
-    settings:{
-        topSpacing:"Medium",
-        bottomSpacing:"Medium",
-        backgroundColor:"Grey",
-        contentAlignment:"Center",
-    },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    images:[
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text"
-        },
-        {
-            url:"/images/jandy-brands.png",
-            altText:"alt text2"
-        },
-]
-} 
+}
