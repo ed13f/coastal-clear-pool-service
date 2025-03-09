@@ -12,26 +12,46 @@ export const heroData: HeroTwoColumnImageType = {
         bottomSpacing:"Medium",
         heroType: "Two Column (Image)",
     },
-    header:"Power Washing",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
+    header:"Professional Power Washing Services",
+    description: "Revitalize your home with our professional power washing services, removing dirt, grime, and mold for a cleaner, refreshed exterior.",
+    // cta: {
+    //     link:"/home",
+    //     title:"Test CTA",
+    //     openInNewWindow:false
+    // },
     image:{
         url:"/images/hayward-brands.png",
         altText:"alt text"
     }
 }
 
+export const fullWidthSectionData : FullWidthSectionType = {
+    settings:{
+        // topSpacing:"Small",
+        // bottomSpacing:"Small",
+        // backgroundColor:"",
+        contentAlignment:"Center",
+    },
+    header:"Restore & Protect Your Pool Deck",
+    description: "Regular deck cleaning is a crucial aspect of home maintenance. As an extension of your living space, your deck serves as a central gathering place during the summer months. To maintain its appearance and longevity, it requires the same level of care and attention as the interior of your home. Without proper upkeep, a wood deck can quickly appear significantly older than its actual age.",
+    // cta: {
+    //     link:"/home",
+    //     title:"Test CTA",
+    //     openInNewWindow:false
+    // },
+    // image:{
+    //     url:"/images/hayward-brands.png",
+    //     altText:"alt text"
+    // }
+} 
+
 export const serviceTabsData: ServiceTabsSectionType = {
     settings:{
         topSpacing:"Medium",
         bottomSpacing:"Medium",
     },
-    header:"this is a header. this is a header.",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
+    header:"View Our Complete Power Washing Services",
+    description: "Discover our full range of professional power washing services, designed to enhance and protect your home’s exterior with expert care.",
     cards:[
         {
             tab:{
@@ -39,21 +59,21 @@ export const serviceTabsData: ServiceTabsSectionType = {
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"this is a sub header",
-                intro:"This is an intro"
+                header:"Deck Power Washing",
+                intro:""
             },
             card:{
                 image:{
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"this is a sub header",
-                description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-2",
-                    title:"Test 2",
-                    openInNewWindow:false
-                },
+                header:"Professional Deck Cleaning & Power Washing",
+                description: "Restore the beauty of your deck with our professional cleaning and power washing services. We remove dirt, grime, mold, and mildew, protecting your deck from damage while enhancing its appearance. Trust our experts to keep your outdoor space looking its best.",
+                // cta: {
+                //     link:"/test-2",
+                //     title:"Test 2",
+                //     openInNewWindow:false
+                // },
             }
         },
         {
@@ -62,21 +82,21 @@ export const serviceTabsData: ServiceTabsSectionType = {
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"2this is a sub header",
-                intro:"2This is an intro"
+                header:"Residential Home Exterior Cleaning",
+                intro:""
             },
             card:{
                 image:{
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"2 this is a sub header",
-                description: "2 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-2",
-                    title:"Test 2",
-                    openInNewWindow:false
-                },
+                header:"Comprehensive Exterior Cleaning for Homes",
+                description: "Our comprehensive exterior cleaning services enhance the curb appeal of your home by removing dirt, stains, mold, and mildew. We use advanced techniques to clean all surfaces, ensuring your home’s exterior looks refreshed and well-maintained for years to come.",
+                // cta: {
+                //     link:"/test-2",
+                //     title:"Test 2",
+                //     openInNewWindow:false
+                // },
             }
         },
         {
@@ -85,144 +105,23 @@ export const serviceTabsData: ServiceTabsSectionType = {
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"3this is a sub header",
-                intro:"3This is an intro"
+                header:"Acid Washing",
+                intro:""
             },
             card:{
                 image:{
                     url:"/images/hayward-brands.png",
                     altText:"alt text"
                 },
-                header:"3 this is a sub header",
-                description: "3 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-3",
-                    title:"Test 3",
-                    openInNewWindow:false
-                },
-            }
-        },
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"4this is a sub header",
-                intro:"4This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"4 this is a sub header",
-                description: "4 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-4",
-                    title:"Test 4",
-                    openInNewWindow:false
-                },
+                header:"Expert Acid Washing for Pool Decks",
+                description: "Our expert acid washing service restores the appearance of your pool deck by effectively removing stains, mineral deposits, and discoloration. Using specialized techniques, we ensure a clean, smooth surface, enhancing both the aesthetics and safety of your outdoor space.",
+                // cta: {
+                //     link:"/test-3",
+                //     title:"Test 3",
+                //     openInNewWindow:false
+                // },
             }
         }
     ]
 }
 
-export const fullWidthSectionData : FullWidthSectionType = {
-    settings:{
-        // topSpacing:"Small",
-        // bottomSpacing:"Small",
-        backgroundColor:"Blue",
-        contentAlignment:"Center",
-    },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    image:{
-        url:"/images/hayward-brands.png",
-        altText:"alt text"
-    }
-} 
-
-export const logoCarouselSectionData : LogoCarouselSectionType = {
-    settings:{
-        
-        topSpacing:"Medium",
-        bottomSpacing:"Medium",
-        contentAlignment:"Center",
-        fullWidthContainer:true,
-        displayBackgroundSquare:true,
-        maxWidth:'Medium'
-    },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    logos:[
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text1"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text2"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text3"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text4"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text5"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text6"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text7"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text8"
-        },
-    ]
-} 
-
-export const twoColumnImageSectionData : TwoColumnImageSectionType = {
-    settings:{
-        topSpacing:"Medium",
-        bottomSpacing:"Medium",
-        backgroundColor:"Grey",
-        contentAlignment:"Center",
-    },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    images:[
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text"
-        },
-        {
-            url:"/images/jandy-brands.png",
-            altText:"alt text2"
-        },
-]
-} 
