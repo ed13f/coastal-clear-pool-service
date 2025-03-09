@@ -1,8 +1,6 @@
 import { FullWidthSectionType } from '../../../components/FullWidthSection/FullWidthSection';
 import { ServiceTabsSectionType } from '../../../components/ServiceTabsSection/ServiceTabsSection';
 import { HeroTwoColumnImageType } from '../../../components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
-import { LogoCarouselSectionType } from '../../../components/LogoCarouselSection/LogoCarouselSection';
-import { TwoColumnImageSectionType } from '../../../components/TwoColumnImageSection/TwoColumnImageSection';
 
 
 
@@ -12,217 +10,106 @@ export const heroData: HeroTwoColumnImageType = {
         bottomSpacing:"Medium",
         heroType: "Two Column (Image)",
     },
-    header:"Pool Equipment",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
+    header:"Professional Pool Equipment Repair Services",
+    description: "Ensure your pool operates flawlessly with our expert equipment repair services, fixing pumps, filters, heaters, and more for optimal performance.",
+
     image:{
-        url:"/images/hayward-brands.png",
+        url:"/images/pool-equipment-repair-hero.jpeg",
         altText:"alt text"
     }
-}
-
-export const serviceTabsData: ServiceTabsSectionType = {
-    settings:{
-        topSpacing:"Medium",
-        bottomSpacing:"Medium",
-    },
-    header:"this is a header. this is a header.",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cards:[
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"this is a sub header",
-                intro:"This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"this is a sub header",
-                description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-2",
-                    title:"Test 2",
-                    openInNewWindow:false
-                },
-            }
-        },
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"2this is a sub header",
-                intro:"2This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"2 this is a sub header",
-                description: "2 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-2",
-                    title:"Test 2",
-                    openInNewWindow:false
-                },
-            }
-        },
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"3this is a sub header",
-                intro:"3This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"3 this is a sub header",
-                description: "3 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-3",
-                    title:"Test 3",
-                    openInNewWindow:false
-                },
-            }
-        },
-        {
-            tab:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"4this is a sub header",
-                intro:"4This is an intro"
-            },
-            card:{
-                image:{
-                    url:"/images/hayward-brands.png",
-                    altText:"alt text"
-                },
-                header:"4 this is a sub header",
-                description: "4 This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-                cta: {
-                    link:"/test-4",
-                    title:"Test 4",
-                    openInNewWindow:false
-                },
-            }
-        }
-    ]
 }
 
 export const fullWidthSectionData : FullWidthSectionType = {
     settings:{
         // topSpacing:"Small",
         // bottomSpacing:"Small",
-        backgroundColor:"Blue",
+        // backgroundColor:"Blue",
         contentAlignment:"Center",
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    image:{
-        url:"/images/hayward-brands.png",
-        altText:"alt text"
-    }
+    header:"Keep Your Pool Equipment Running Smoothly",
+    description: "Ensure optimal performance and longevity of your pool equipment with our expert repair services. We specialize in diagnosing and resolving issues with pumps, filters, and more, keeping your pool system running efficiently and reliably.",
 } 
 
-export const logoCarouselSectionData : LogoCarouselSectionType = {
+export const serviceTabsData: ServiceTabsSectionType = {
     settings:{
-        
         topSpacing:"Medium",
         bottomSpacing:"Medium",
-        contentAlignment:"Center",
-        fullWidthContainer:true,
-        displayBackgroundSquare:true,
-        maxWidth:'Medium'
     },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    logos:[
+    header:"View Our Pool Equipment Repair Services",
+    description: "Explore our expert pool equipment repair services, ensuring your pumps, filters, lighting function efficiently for a well-maintained swimming experience.",
+    cards:[
         {
-            url:"/images/hayward-brands.png",
-            altText:"alt text1"
+            tab:{
+                image:{
+                    url:"/images/pool-pump-repair-image.jpg",
+                    altText:"alt text"
+                },
+                header:"Pool Pumps",
+                intro:""
+            },
+            card:{
+                image:{
+                    url:"/images/pool-pump-repair-image.jpg",
+                    altText:"alt text"
+                },
+                header:"Reliable Pool Pump Services",
+                description: "Our reliable pool pump services ensure optimal performance and efficiency. From repairs and maintenance to new installations, we keep your pump running smoothly, improving water circulation and filtration for a cleaner, healthier, and more enjoyable swimming experience.",
+            }
         },
         {
-            url:"/images/hayward-brands.png",
-            altText:"alt text2"
+            tab:{
+                image:{
+                    url:"/images/pool-filter-repair-image.jpg",
+                    altText:"alt text"
+                },
+                header:"Pool Filters",
+                intro:""
+            },
+            card:{
+                image:{
+                    url:"/images/pool-filter-repair-image.jpg",
+                    altText:"alt text"
+                },
+                header:"Professional Pool Filter Maintenance & Repair",
+                description: "Our professional pool filter maintenance and repair services ensure clean, clear water by removing debris and contaminants. We specialize in inspecting, cleaning, and repairing all types of pool filters, improving efficiency and extending the lifespan of your filtration system.",
+            }
         },
         {
-            url:"/images/hayward-brands.png",
-            altText:"alt text3"
+            tab:{
+                image:{
+                    url:"/images/swimming-pool-lights-repair-2.jpg",
+                    altText:"alt text"
+                },
+                header:"Pool Lighting ",
+                intro:""
+            },
+            card:{
+                image:{
+                    url:"/images/swimming-pool-lights-repair-2.jpg",
+                    altText:"alt text"
+                },
+                header:"Enhance Your Pool with Expert Lighting Services",
+                description: "Transform your pool area with our expert lighting services. We design and install custom lighting solutions that highlight your pool's beauty, create a relaxing ambiance, and improve safety, allowing you to enjoy your outdoor space day and night.",
+            }
         },
         {
-            url:"/images/hayward-brands.png",
-            altText:"alt text4"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text5"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text6"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text7"
-        },
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text8"
-        },
+            tab:{
+                image:{
+                    url:"/images/salt-water-pool-system-repair.jpg",
+                    altText:"alt text"
+                },
+                header:"Salt Cell Systems",
+                intro:""
+            },
+            card:{
+                image:{
+                    url:"/images/salt-water-pool-system-repair.jpg",
+                    altText:"alt text"
+                },
+                header:"Pool Salt Cell System Installation & Maintenance",
+                description: "Our pool salt system installation and maintenance services provide a more eco-friendly and low-maintenance alternative to traditional chlorine. We ensure optimal performance, enhancing water quality while reducing chemical use, and offer regular maintenance for long-lasting results.",
+            }
+        }
     ]
-} 
+}
 
-export const twoColumnImageSectionData : TwoColumnImageSectionType = {
-    settings:{
-        topSpacing:"Medium",
-        bottomSpacing:"Medium",
-        backgroundColor:"Grey",
-        contentAlignment:"Center",
-    },
-    header:"this is a header. this is a header. ",
-    description: "This is a description. This is a description. This is a description. This is a description. This is a description. This is a description.",
-    cta: {
-        link:"/home",
-        title:"Test CTA",
-        openInNewWindow:false
-    },
-    images:[
-        {
-            url:"/images/hayward-brands.png",
-            altText:"alt text"
-        },
-        {
-            url:"/images/jandy-brands.png",
-            altText:"alt text2"
-        },
-]
-} 

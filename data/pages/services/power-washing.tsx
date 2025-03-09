@@ -20,7 +20,7 @@ export const heroData: HeroTwoColumnImageType = {
     //     openInNewWindow:false
     // },
     image:{
-        url:"/images/hayward-brands.png",
+        url:"/images/Pool-Deck-Patio-Cleaning.jpg",
         altText:"alt text"
     }
 }
@@ -56,7 +56,7 @@ export const serviceTabsData: ServiceTabsSectionType = {
         {
             tab:{
                 image:{
-                    url:"/images/hayward-brands.png",
+                    url:"/images/pressure-washing-before-after.jpg",
                     altText:"alt text"
                 },
                 header:"Deck Power Washing",
@@ -64,7 +64,7 @@ export const serviceTabsData: ServiceTabsSectionType = {
             },
             card:{
                 image:{
-                    url:"/images/hayward-brands.png",
+                    url:"/images/pressure-washing-before-after.jpg",
                     altText:"alt text"
                 },
                 header:"Professional Deck Cleaning & Power Washing",
@@ -79,7 +79,7 @@ export const serviceTabsData: ServiceTabsSectionType = {
         {
             tab:{
                 image:{
-                    url:"/images/hayward-brands.png",
+                    url:"/images/residential-pressure-washing.jpg",
                     altText:"alt text"
                 },
                 header:"Residential Home Exterior Cleaning",
@@ -87,22 +87,17 @@ export const serviceTabsData: ServiceTabsSectionType = {
             },
             card:{
                 image:{
-                    url:"/images/hayward-brands.png",
+                    url:"/images/residential-pressure-washing.jpg",
                     altText:"alt text"
                 },
                 header:"Comprehensive Exterior Cleaning for Homes",
                 description: "Our comprehensive exterior cleaning services enhance the curb appeal of your home by removing dirt, stains, mold, and mildew. We use advanced techniques to clean all surfaces, ensuring your home’s exterior looks refreshed and well-maintained for years to come.",
-                // cta: {
-                //     link:"/test-2",
-                //     title:"Test 2",
-                //     openInNewWindow:false
-                // },
             }
         },
         {
             tab:{
                 image:{
-                    url:"/images/hayward-brands.png",
+                    url:"/images/Acid-washing-power-washing.png",
                     altText:"alt text"
                 },
                 header:"Acid Washing",
@@ -110,16 +105,11 @@ export const serviceTabsData: ServiceTabsSectionType = {
             },
             card:{
                 image:{
-                    url:"/images/hayward-brands.png",
+                    url:"/images/Acid-washing-power-washing.png",
                     altText:"alt text"
                 },
                 header:"Expert Acid Washing for Pool Decks",
                 description: "Our expert acid washing service restores the appearance of your pool deck by effectively removing stains, mineral deposits, and discoloration. Using specialized techniques, we ensure a clean, smooth surface, enhancing both the aesthetics and safety of your outdoor space.",
-                // cta: {
-                //     link:"/test-3",
-                //     title:"Test 3",
-                //     openInNewWindow:false
-                // },
             }
         }
     ]
