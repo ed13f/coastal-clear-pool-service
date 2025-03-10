@@ -24,7 +24,7 @@ export const twoColumnImageSectionData : TwoColumnImageSectionType = {
         <p>Coastal Clear Pool Repair operates Monday through Friday from 9:00 AM to 5:00 PM. Call for a free estimate today!<p>
         <ul>
         <li>Phone: <a href"tel:15613333333"=>(561)-333-3333</a></li>
-        <li>Email: <a href"mail:service@coastalclearpoolrepair.com"=>service@coastalclearpoolrepair.com</a></li>
+        <li>Email: <a href"mailto:service@coastalclearpoolrepair.com"=>service@coastalclearpoolrepair.com</a></li>
         <li>Emergency service available after hours</li>
         </ul>
     
