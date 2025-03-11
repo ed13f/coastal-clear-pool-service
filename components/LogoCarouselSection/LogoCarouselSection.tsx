@@ -38,9 +38,9 @@ const modifyClassName = ({
 
 export type LogoCarouselSectionType = {
   settings: SettingsInput;
-  header:string;
-  description:string;
-  cta:CTA;
+  header?:string;
+  description?:string;
+  cta?:CTA;
   logos:ImageType[];
 }
 
@@ -49,9 +49,11 @@ export const LogoCarouselSection = ({ settings,header,description,logos, cta }: 
     <section className={`${styles.root} ${modifyClassName(settings, styles)}`}>
         <div className={`${styles.container} container`}>
         <div className={`row`}>
+          {header && (
             <div className={`col-12 ${styles.headerContainer}`}>
-              {header && <h2 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h2> }
+              <h2 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h2> 
             </div>
+          )}
           </div>
           <div>
             <div className={`col-12 ${styles.backgroundContainer}`}>
