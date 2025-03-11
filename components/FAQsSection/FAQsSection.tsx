@@ -23,8 +23,8 @@ const modifyClassName = ({
 
 export type FAQsSectionType = {
     settings: SettingsInput;
-    header:string;
-    description:string;
+    header?:string;
+    description?:string;
     faqs:{
         question:string;
         answer:string;

@@ -29,8 +29,8 @@ const modifyClassName = ({
 
 export type TwoColumnImageSectionType = {
     settings: SettingsInput;
-    header:string;
-    description:string;
+    header?:string;
+    description?:string;
     cta?:CTA;
     images:ImageType[];
   }

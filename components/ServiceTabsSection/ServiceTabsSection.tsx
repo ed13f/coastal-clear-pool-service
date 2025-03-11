@@ -27,8 +27,8 @@ const modifyClassName = ({
 
 export type ServiceTabsSectionType = {
     settings: SettingsInput;
-    header:string;
-    description:string;
+    header?:string;
+    description?:string;
     cards:
         {
             tab:{
@@ -71,7 +71,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
             <div className={`row ${styles.row} ${styles.mainContentWrapper}`}>
                 <div className={`col-12 col-md-6`}>
                     <div className={`contentWrapper`}>
-                        <h2 className={`header ${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h2>
+                        {header  && <h2 className={`header ${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h2> }
                     </div>
                 </div>
                 <div className={`col-12 col-md-6`}>

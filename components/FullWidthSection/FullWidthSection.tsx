@@ -25,8 +25,8 @@ const modifyClassName = ({
 
 export type FullWidthSectionType = {
     settings: SettingsInput;
-    header:string;
-    description:string;
+    header?:string;
+    description?:string;
     cta?: CTA;
     image?: ImageType;
 }
