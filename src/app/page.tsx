@@ -1,6 +1,6 @@
 import React  from 'react';
 
-import { homeData } from '../../data/pages/Home';
+import { homeData } from '../../data/pages/home';
 import { HeroSection } from '../../components/HeroSection';
 
 import { RenderComponents } from '../../components/RenderComponents';

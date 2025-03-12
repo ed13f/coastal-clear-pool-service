@@ -1,21 +1,12 @@
-import { heroData, twoColumnImageSectionData } from '../../../data/pages/contact-us';
-
+import { contactUsData } from '../../../data/pages/contact-us';
 import { HeroSection } from '../../../components/HeroSection';
-import { TwoColumnImageSection } from '../../../components/TwoColumnImageSection';
-
+import { RenderComponents } from '../../../components/RenderComponents';
 
 export default function Home() {
   return (
     <>
-      <HeroSection hero={heroData} />
-      <TwoColumnImageSection
-        settings={twoColumnImageSectionData.settings}
-        header={twoColumnImageSectionData.header}
-        description={twoColumnImageSectionData.description}
-        images={twoColumnImageSectionData.images}
-        cta={twoColumnImageSectionData.cta}
-      />
-
+      <HeroSection hero={contactUsData.hero} />
+      <RenderComponents pageComponent={contactUsData.components} />
     </>
   );
 }

@@ -1,28 +1,12 @@
-import { heroData, serviceTabsData, fullWidthSectionData } from '../../../../data/pages/services/pool-equipment-repair';
-
+import { poolEquipmentRepairData } from '../../../../data/pages/services/pool-equipment-repair';
 import { HeroSection } from '../../../../components/HeroSection';
-import { ServiceTabsSection } from '../../../../components/ServiceTabsSection';
-import { FullWidthSection } from '../../../../components/FullWidthSection';
-
+import { RenderComponents } from '../../../../components/RenderComponents';
 
 export default function Home() {
   return (
     <>
-      <HeroSection hero={heroData} />
-      <FullWidthSection
-        settings={fullWidthSectionData.settings}
-        header={fullWidthSectionData.header}
-        description={fullWidthSectionData.description}
-        cta={fullWidthSectionData.cta}
-        image={fullWidthSectionData.image}
-      />
-      <ServiceTabsSection 
-        settings={serviceTabsData.settings}
-        header={serviceTabsData.header}
-        description={serviceTabsData.description}
-        cards={serviceTabsData.cards}
-      />
-      
+      <HeroSection hero={poolEquipmentRepairData.hero} />
+      <RenderComponents pageComponent={poolEquipmentRepairData.components} />
     </>
   );
 }

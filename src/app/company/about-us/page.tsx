@@ -1,29 +1,12 @@
-import { heroData, twoColumnImageSectionData, fullWidthSectionData } from '../../../../data/pages/company/about-us';
-
+import { aboutUsData } from '../../../../data/pages/company/about-us';
 import { HeroSection } from '../../../../components/HeroSection';
-import { TwoColumnImageSection } from '../../../../components/TwoColumnImageSection';
-import { FullWidthSection } from '../../../../components/FullWidthSection/FullWidthSection';
-
+import { RenderComponents } from '../../../../components/RenderComponents';
 
 export default function Home() {
   return (
     <>
-      <HeroSection hero={heroData} />
-      <FullWidthSection
-        settings={fullWidthSectionData.settings}
-        header={fullWidthSectionData.header}
-        description={fullWidthSectionData.description}
-        cta={fullWidthSectionData.cta}
-        image={fullWidthSectionData.image}
-      />
-      <TwoColumnImageSection
-        settings={twoColumnImageSectionData.settings}
-        header={twoColumnImageSectionData.header}
-        description={twoColumnImageSectionData.description}
-        images={twoColumnImageSectionData.images}
-        cta={twoColumnImageSectionData.cta}
-      />
-
+      <HeroSection hero={aboutUsData.hero} />
+      <RenderComponents pageComponent={aboutUsData.components} />
     </>
   );
 }
