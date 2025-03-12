@@ -1,4 +1,4 @@
-export const homeData: any = {
+export const homeData:any = {
     hero:{
         settings:{
             topSpacing:"Medium",
