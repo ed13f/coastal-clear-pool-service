@@ -6,16 +6,9 @@ import { FullWidthSection } from '../../../components/FullWidthSection';
 import { LogoCarouselSection } from '../../../components/LogoCarouselSection';
 import { TwoColumnImageSection } from '../../../components/TwoColumnImageSection';
 
-export default function Home() {
+export default function Services() {
   return (
     <>
-      <HeroSection 
-        settings={heroData.settings}
-        header={heroData.header}
-        description={heroData.description}
-        cta={heroData.cta}
-        image={heroData.image}
-        />
       <ServiceTabsSection 
         settings={serviceTabsData.settings}
         header={serviceTabsData.header}

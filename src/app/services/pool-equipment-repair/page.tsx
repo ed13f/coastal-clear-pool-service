@@ -2,7 +2,7 @@ import { poolEquipmentRepairData } from '../../../../data/pages/services/pool-eq
 import { HeroSection } from '../../../../components/HeroSection';
 import { RenderComponents } from '../../../../components/RenderComponents';
 
-export default function Home() {
+export default function PoolEquipmentRepairs() {
   return (
     <>
       <HeroSection hero={poolEquipmentRepairData.hero} />
