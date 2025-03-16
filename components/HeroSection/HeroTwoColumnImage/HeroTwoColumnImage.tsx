@@ -3,11 +3,10 @@ import Image from 'next/image';
 
 import { CTAButton } from '../../CTAButton';
 import styles from './HeroTwoColumnImage.module.scss'
-
 import { CTA as CTAType, Image as ImageType, SettingsInput } from '../../../typescript/GlobalComponent';
-
 import  {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from '../../../helper'
 
+/* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = ({
     topSpacing,
     bottomSpacing,
@@ -34,6 +33,7 @@ export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: H
     <section className={`hero ${styles.hero} ${modifyClassName(settings)}`}>
         <div className={`container`}>
             <div className={`${styles.row} row ${(image && !image.url) && styles.noFeaturedImageBackground}`}>
+                 {/* Content Column */}
                 <div className={`col-12 col-md-6 order-2 order-md-1`}>
                     <div className={`${styles.contentWrapper}`}>
                         <div className={styles.headerWrapper}>
@@ -47,6 +47,7 @@ export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: H
                         )}
                     </div>
                 </div>
+                {/* Image Column */}
                 <div className={`col-12 col-md-6  order-1 order-md-2 ${styles.imageColumn}`}>
                     {image && image.url && (
                         <div className={`imageBorderWrapper ${styles.imageWrapper}`}>

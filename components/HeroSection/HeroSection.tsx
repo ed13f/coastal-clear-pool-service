@@ -12,13 +12,10 @@ export type HeroType = {
         cta?:CTAType;
         image?: ImageType;
     }
-    
 }
 
-
-
+ {/* Conditionally assign hero component based on hero type option */}
 export const HeroSection = ({hero} : HeroType) => {
-    console.log("hero: ", hero);
     return (
         <>
             {hero.settings.heroType == "Two Column (Image)" && (

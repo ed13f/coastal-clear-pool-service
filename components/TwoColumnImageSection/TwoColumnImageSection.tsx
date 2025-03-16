@@ -38,6 +38,7 @@ export type TwoColumnImageSectionType = {
 export const TwoColumnImageSection = ({ settings,header,description,cta,images}: TwoColumnImageSectionType) => {
     const [swiper, setSwiper] = useState<any>();
     const hasNavigation = images && images.length > 1;
+
     return (
     <section className={`${styles.root} ${modifyClassName(settings)}`}>
         <div className={`container`}>
@@ -51,57 +52,47 @@ export const TwoColumnImageSection = ({ settings,header,description,cta,images}:
                         </div>
                     </div>
                     <div className={`${styles.imageColumn} col-12 col-md-6`}>
-                        {/* {(images && images.length == 1) && (
-                            <div className={styles.imageWrapper}>
-                                <div className={`${styles.imageBorder} boxBorder`}>
-                                    {images[0].url && <Image className={`boxBorderInner`} src={`${images[0].url}?auto=webp`} alt={images[0].altText}  fill sizes="100%" style={{objectFit:"cover"}}/>}
-                                </div>
-                            </div>
-                        )} */}
-                        {/* {(images && images.length > 1) && ( */}
-                            <Swiper
-                                slidesPerView={1}
-                                loop={true}
-                                className={`${styles.swiper} ${styles.hasNavigation}`}
-                                modules={[Autoplay, Pagination, Navigation, A11y]}
-                                autoHeight={true}
-                                pagination={{
-                                bulletActiveClass: styles.bulletActive,
-                                bulletClass: styles.sliderBullet,
-                                clickable: true,
-                                clickableClass: styles.pagination,
-                                enabled: hasNavigation,
-                                }}
-                                onSwiper={(swiperInstance:any) => setSwiper(swiperInstance)}
-                            >
-
+                        <Swiper
+                            slidesPerView={1}
+                            loop={true}
+                            className={`${styles.swiper} ${styles.hasNavigation}`}
+                            modules={[Autoplay, Pagination, Navigation, A11y]}
+                            autoHeight={true}
+                            pagination={{
+                            bulletActiveClass: styles.bulletActive,
+                            bulletClass: styles.sliderBullet,
+                            clickable: true,
+                            clickableClass: styles.pagination,
+                            enabled: hasNavigation,
+                            }}
+                            onSwiper={(swiperInstance:any) => setSwiper(swiperInstance)}
+                        >
+                            {/* A slider added for each image, the image will be static if only one is assigned */}
                             {images?.map((image) => (
                                 <SwiperSlide key={`${image.altText}`}>
                                     <div className={styles.imageWrapper}>
-                                    <div className={`${styles.imageBorder} boxBorder`}>
-                                        {image.url && <Image className={`boxBorderInner`} src={`${image.url}?auto=webp`} alt={image.altText}  fill sizes="100%" style={{objectFit:"cover"}}/>}
-                                    </div>
+                                        <div className={`${styles.imageBorder} boxBorder`}>
+                                            {image.url && <Image className={`boxBorderInner`} src={`${image.url}?auto=webp`} alt={image.altText}  fill sizes="100%" style={{objectFit:"cover"}}/>}
+                                        </div>
                                     </div>
                                 </SwiperSlide>
                             ))}
-                            </Swiper>
-                            
-                        {/* )} */}
+                        </Swiper>
+                        {/* Optional navigation when more than one image is added */}
                         {hasNavigation && (
-                                <>
-                                  <button
+                            <>
+                                <button
                                     aria-label="Go to prev slide"
                                     className={styles.prevButton}
                                     onClick={() => swiper?.slidePrev()}
-                                  />
-                                  <button
+                                />
+                                <button
                                     aria-label="Go to next slide"
                                     className={styles.nextButton}
                                     onClick={() => swiper?.slideNext()}
-                                  />
-                                </>
-                              )}
-                        
+                                />
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

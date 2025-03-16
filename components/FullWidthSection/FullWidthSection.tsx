@@ -33,23 +33,23 @@ export type FullWidthSectionType = {
 
 export const FullWidthSection = ({ settings,header,description, cta, image }: FullWidthSectionType) => {
     return (
-    <section className={`${styles.root} ${modifyClassName(settings)}`}>
-        <div className={`container ${styles.container}`}>
-            <div className={`row ${styles.row}`}>
-                <div className={`col-12`}>
-                    <div className={`contentWrapper`}>
-                        {header &&  <h2 className={`header`} dangerouslySetInnerHTML={{ __html: header }}></h2> }
-                        {description &&  <div className={`description`} dangerouslySetInnerHTML={{ __html: description }}></div> }
-                        {(image && image.url) && (
-                            <div className={`${styles.imageWithBorder} imageBorder`}>
-                                <Image className={styles.featuredImage} src={`${image.url}?auto=webp`} alt={image.altText} width={900} height={500}/>
-                            </div>
-                        )}
-                        { cta && <div className={`cta-wrapper`}><CTAButton cta={cta}></CTAButton></div> }
+        <section className={`${styles.root} ${modifyClassName(settings)}`}>
+            <div className={`container ${styles.container}`}>
+                <div className={`row ${styles.row}`}>
+                    <div className={`col-12`}>
+                        <div className={`contentWrapper`}>
+                            {header &&  <h2 className={`header`} dangerouslySetInnerHTML={{ __html: header }}></h2> }
+                            {description &&  <div className={`description`} dangerouslySetInnerHTML={{ __html: description }}></div> }
+                            {(image && image.url) && (
+                                <div className={`${styles.imageWithBorder} imageBorder`}>
+                                    <Image className={styles.featuredImage} src={`${image.url}?auto=webp`} alt={image.altText} width={900} height={500}/>
+                                </div>
+                            )}
+                            { cta && <div className={`cta-wrapper`}><CTAButton cta={cta}></CTAButton></div> }
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-  );
+        </section>
+    );
 }
