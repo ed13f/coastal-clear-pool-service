@@ -39,6 +39,7 @@ export function Header({ header}: {header: HeaderType}) {
   const [activebutton, setActivebutton] = useState('-1');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Updates the active button state when a main nav item is clicked on mobile.
   const toggleSubMenuDisplay = (event:React.MouseEvent<HTMLButtonElement>) => {
     let dataAttributes = event.currentTarget.dataset;
     if(dataAttributes.index == activebutton){
@@ -48,6 +49,7 @@ export function Header({ header}: {header: HeaderType}) {
     }
   };
 
+  // Used to open/close the mobile nav menu.
   const toggleMenuDisplay = () => {
     if(mobileMenuOpen){
       setMobileMenuOpen(false);
@@ -56,12 +58,13 @@ export function Header({ header}: {header: HeaderType}) {
     }
   };
 
+  // Used to reset menu on mobile by closing it when a link is clicked.
   const resetToggleMenu = () => {
     setMobileMenuOpen(false);
     setActivebutton('-1');
   };
 
-
+  // Used to conditionally add a key based on the main nav item type option.
   const createUniqueItemKey = (item:any) => {
     let uniqueID = "";
     if(item.header){
@@ -72,11 +75,13 @@ export function Header({ header}: {header: HeaderType}) {
     return uniqueID;
   }
 
+  // Converts umber to a string.
   const convertNumberToString = (number:number) => {
     return number.toString();
   }
   
   useEffect(() => {
+    // prevent the page body from scrolling when the mobile nave is open.
     if (mobileMenuOpen == true) {
       setTimeout(function() {
         document.body.style.position = 'fixed';
@@ -87,7 +92,7 @@ export function Header({ header}: {header: HeaderType}) {
       }, 350);
     }
     function handleResize() {
-      // Reset body style when screen width changes to desktop
+      // Reset body style when screen width changes to desktop. This hides the mobile nav if the screen resizes above the mobile width.
       if(window.innerWidth >= 992){
         document.body.style.position = '';
       } else if(mobileMenuOpen == true && window.innerWidth <= 992){

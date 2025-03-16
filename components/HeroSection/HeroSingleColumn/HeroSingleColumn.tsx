@@ -1,10 +1,11 @@
 import React from 'react';
-import styles from './HeroSingleColumn.module.scss';
 
+import styles from './HeroSingleColumn.module.scss';
 import { CTAButton } from '../../CTAButton';
 import { SettingsInput, CTA as CTAType, Image } from '../../../typescript/GlobalComponent';
 import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace} from '../../../helper';
 
+/* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = (
     {
         topSpacing,

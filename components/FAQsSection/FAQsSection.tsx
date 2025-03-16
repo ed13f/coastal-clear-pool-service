@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 
 import styles from './FAQsSection.module.scss';
-// import { FAQsSection as ComponentType } from '../../typescript/component';
 import { SettingsInput} from '../../typescript/GlobalComponent';
 import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from '../../helper'
 
@@ -61,6 +60,7 @@ export const FAQsSection = ({ settings,header, description='', faqs }: FAQsSecti
     
     return (
         <>
+        {/* Add FAQs structure data schema to the page head */}
         <Head>
             <script type="application/ld+json">
                 {JSON.stringify(faqSchema)}

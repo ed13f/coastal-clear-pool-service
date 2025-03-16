@@ -1,5 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-
 "use client"
 
 import React, { useState } from 'react';
@@ -15,6 +13,7 @@ import { SettingsInput, CTA, Image as ImageType } from '../../typescript/GlobalC
 import { CTAButton } from '../CTAButton';
 import styles from './ServiceTabsSection.module.scss';
     
+/* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = ({
     topSpacing,
     bottomSpacing,
@@ -29,20 +28,19 @@ export type ServiceTabsSectionType = {
     settings: SettingsInput;
     header?:string;
     description?:string;
-    cards:
-        {
-            tab:{
-                image: ImageType;
-                header:string;
-                intro:string;
-            }
-            card:{
-                image: ImageType;
-                header:string;
-                description:string;
-                cta?: CTA;
-            }
-        }[];
+    cards:{
+        tab:{
+            image: ImageType;
+            header:string;
+            intro:string;
+        }
+        card:{
+            image: ImageType;
+            header:string;
+            description:string;
+            cta?: CTA;
+        }
+    }[];
 }
 
 type swiper = {
@@ -61,6 +59,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
     console.log('cards: ', cards[0].card.image.url);
     return (
         <>
+        {/* Preload all images that are used in the hidden tab content */}
         <Head>
             {cards?.map((card) => (
                 (card.card.image && card.card.image.url) && <link key={card.card.image.url} rel="preload" href={`${card.card.image.url}`} as="image" />

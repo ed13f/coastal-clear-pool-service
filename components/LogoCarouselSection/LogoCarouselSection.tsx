@@ -47,64 +47,66 @@ export type LogoCarouselSectionType = {
 export const LogoCarouselSection = ({ settings,header,description,logos, cta }: LogoCarouselSectionType) => {
   return (
     <section className={`${styles.root} ${modifyClassName(settings, styles)}`}>
-        <div className={`${styles.container} container`}>
+      <div className={`${styles.container} container`}>
         <div className={`row`}>
           {header && (
             <div className={`col-12 ${styles.headerContainer}`}>
               <h2 className={`${styles.header}`} dangerouslySetInnerHTML={{ __html: header }}></h2> 
             </div>
           )}
-          </div>
-          <div>
-            <div className={`col-12 ${styles.backgroundContainer}`}>
+        </div>
+        <div>
+          <div className={`col-12 ${styles.backgroundContainer}`}>
+            {/* Conditional background square screen */}
             {settings.displayBackgroundSquare && <div className={`${styles.backgroundSquare}`}></div>}
-              {description && (
-                <div className={`${styles.contentContainer}`} >
-                  <div className={`description`} dangerouslySetInnerHTML={{ __html: description }}></div>
-                </div>
-              )}
-              <Swiper
-                slidesPerView={2}
-                loop={true}
-                className={`${styles.swiper}`}
-                speed={5000}
-                autoplay={{ delay: 0, disableOnInteraction: false, waitForTransition: true }}
-                modules={[Autoplay]}
-                autoHeight={true}
-                breakpoints={{
-                  400: {
-                    slidesPerView: 3,
-                  },
-                  576: {
-                    slidesPerView: 4,
-                  },
-                  768: {
-                    slidesPerView: 4,
-                  },
-                  992: {
-                    slidesPerView: 5,
-                  },
-                  1200: {
-                    slidesPerView: 6,
-                  },
-                }}
-              >
-                {logos?.map((logo) => (
-                  <SwiperSlide key={logo.altText} className={`${styles.swiperSlide}`}>
-                    <div className={`${styles.cardWrapper} boxShadow border-radius`}>
-                      {( logo && logo.url ) && <Image className={`${styles.logoImage}`} src={`${logo.url}?auto=webp`} alt={logo.altText} fill sizes="100%" style={{objectFit:"contain"}}/> }
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-              {cta && (
-                <div className={`${styles.ctaContainer}`} >
-                  <CTAButton cta={cta}></CTAButton>
-                </div>
-              )}
-            </div>
+            {description && (
+              <div className={`${styles.contentContainer}`} >
+                <div className={`description`} dangerouslySetInnerHTML={{ __html: description }}></div>
+              </div>
+            )}
+            <Swiper
+              slidesPerView={2}
+              loop={true}
+              className={`${styles.swiper}`}
+              speed={5000}
+              autoplay={{ delay: 0, disableOnInteraction: false, waitForTransition: true }}
+              modules={[Autoplay]}
+              autoHeight={true}
+              breakpoints={{
+                400: {
+                  slidesPerView: 3,
+                },
+                576: {
+                  slidesPerView: 4,
+                },
+                768: {
+                  slidesPerView: 4,
+                },
+                992: {
+                  slidesPerView: 5,
+                },
+                1200: {
+                  slidesPerView: 6,
+                },
+              }}
+            >
+              {/* Loops through to create a logo card for each entry */}
+              {logos?.map((logo) => (
+                <SwiperSlide key={logo.altText} className={`${styles.swiperSlide}`}>
+                  <div className={`${styles.cardWrapper} boxShadow border-radius`}>
+                    {( logo && logo.url ) && <Image className={`${styles.logoImage}`} src={`${logo.url}?auto=webp`} alt={logo.altText} fill sizes="100%" style={{objectFit:"contain"}}/> }
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            {cta && (
+              <div className={`${styles.ctaContainer}`} >
+                <CTAButton cta={cta}></CTAButton>
+              </div>
+            )}
           </div>
         </div>
+      </div>
     </section>
   );
 }
