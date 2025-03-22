@@ -1,6 +1,6 @@
-import { faqsData } from '../../../../data/pages/company/faqs';
-import { HeroSection } from '../../../../components/HeroSection';
-import { RenderComponents } from '../../../../components/RenderComponents';
+import { faqsData } from 'data/pages/company/faqs';
+import { HeroSection } from 'components/HeroSection';
+import { RenderComponents } from 'components/RenderComponents';
 
 export default function Faqs() {
   return (

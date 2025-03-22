@@ -2,9 +2,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// import type {StaticImageData} from 'next/image';
 
 import styles from './Header.module.scss';
-import headerData from '../../data/header/navigation';
+import headerData from 'data/header/navigation';
 
 export type HeaderType = {
   logo:{

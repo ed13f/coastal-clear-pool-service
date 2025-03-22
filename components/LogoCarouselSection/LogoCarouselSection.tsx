@@ -6,10 +6,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/scss';
 
-import { CTAButton } from '../CTAButton';
+import { CTAButton } from 'components/CTAButton';
 import styles from './LogoCarouselSection.module.scss';
-import { SettingsInput, CTA, Image as ImageType, Styles } from '../../typescript/GlobalComponent';
-import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace,modifyComponentClassMaxWidth} from '../../helper'
+import { SettingsInput, CTA, Image as ImageType, Styles } from 'typescript/GlobalComponent';
+import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace,modifyComponentClassMaxWidth} from 'helper'
 
 /* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = ({

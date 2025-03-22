@@ -8,9 +8,9 @@ import { Autoplay, Navigation, Pagination, A11y  } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 
-import { modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from '../../helper';
-import { SettingsInput, CTA, Image as ImageType } from '../../typescript/GlobalComponent';
-import { CTAButton } from '../CTAButton';
+import { modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from 'helper';
+import { SettingsInput, CTA, Image as ImageType } from 'typescript/GlobalComponent';
+import { CTAButton } from 'components/CTAButton';
 import styles from './ServiceTabsSection.module.scss';
     
 /* Checks Input settings and assigns root level classes to manupulate the component */

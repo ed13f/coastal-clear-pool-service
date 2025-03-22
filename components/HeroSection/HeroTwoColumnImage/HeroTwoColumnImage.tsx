@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { CTAButton } from '../../CTAButton';
+import { CTAButton } from 'components/CTAButton';
 import styles from './HeroTwoColumnImage.module.scss'
-import { CTA as CTAType, Image as ImageType, SettingsInput } from '../../../typescript/GlobalComponent';
-import  {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from '../../../helper'
+import { CTA as CTAType, Image as ImageType, SettingsInput } from 'typescript/GlobalComponent';
+import  {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from 'helper'
 
 /* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = ({

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { HeroTwoColumnImage } from './HeroTwoColumnImage';
 import { HeroSingleColumn } from './HeroSingleColumn';
-import { CTA as CTAType, Image as ImageType, SettingsInput } from '../../typescript/GlobalComponent';
+import { CTA as CTAType, Image as ImageType, SettingsInput } from 'typescript/GlobalComponent';
 
 export type HeroType = {
     hero:{

@@ -1,10 +1,10 @@
 import { heroData, serviceTabsData, fullWidthSectionData, logoCarouselSectionData, twoColumnImageSectionData } from '../../../data/pages/services/services';
 
-import { HeroSection } from '../../../components/HeroSection';
-import { ServiceTabsSection } from '../../../components/ServiceTabsSection';
-import { FullWidthSection } from '../../../components/FullWidthSection';
-import { LogoCarouselSection } from '../../../components/LogoCarouselSection';
-import { TwoColumnImageSection } from '../../../components/TwoColumnImageSection';
+import { HeroSection } from 'components/HeroSection';
+import { ServiceTabsSection } from 'components/ServiceTabsSection';
+import { FullWidthSection } from 'components/FullWidthSection';
+import { LogoCarouselSection } from 'components/LogoCarouselSection';
+import { TwoColumnImageSection } from 'components/TwoColumnImageSection';
 
 export default function Services() {
   return (

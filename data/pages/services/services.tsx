@@ -1,8 +1,8 @@
-import { FullWidthSectionType } from '../../../components/FullWidthSection/FullWidthSection';
-import { ServiceTabsSectionType } from '../../../components/ServiceTabsSection/ServiceTabsSection';
-import { HeroTwoColumnImageType } from '../../../components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
-import { LogoCarouselSectionType } from '../../../components/LogoCarouselSection/LogoCarouselSection';
-import { TwoColumnImageSectionType } from '../../../components/TwoColumnImageSection/TwoColumnImageSection';
+import { FullWidthSectionType } from 'components/FullWidthSection/FullWidthSection';
+import { ServiceTabsSectionType } from 'components/ServiceTabsSection/ServiceTabsSection';
+import { HeroTwoColumnImageType } from 'components/HeroSection/HeroTwoColumnImage/HeroTwoColumnImage';
+import { LogoCarouselSectionType } from 'components/LogoCarouselSection/LogoCarouselSection';
+import { TwoColumnImageSectionType } from 'components/TwoColumnImageSection/TwoColumnImageSection';
 
 
 

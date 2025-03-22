@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { SettingsInput, CTA, Image} from '../../typescript/GlobalComponent';
-import { ServiceTabsSection } from '../../components/ServiceTabsSection';
-import { FullWidthSection } from '../../components/FullWidthSection';
-import { LogoCarouselSection } from '../../components/LogoCarouselSection';
-import { TwoColumnImageSection } from '../../components/TwoColumnImageSection';
-import { FAQsSection } from '../../components/FAQsSection';
+import { SettingsInput, CTA, Image} from 'typescript/GlobalComponent';
+import { ServiceTabsSection } from 'components/ServiceTabsSection';
+import { FullWidthSection } from 'components/FullWidthSection';
+import { LogoCarouselSection } from 'components/LogoCarouselSection';
+import { TwoColumnImageSection } from 'components/TwoColumnImageSection';
+import { FAQsSection } from 'components/FAQsSection';
 
 export type RenderComponentsType = {
     pageComponent:{

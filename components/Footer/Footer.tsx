@@ -1,5 +1,5 @@
 import Style from './Footer.module.scss';
-import footer from '../../data/footer';
+import footer from 'data/footer';
 
 export type FooterType = {
   copyRight:string;
