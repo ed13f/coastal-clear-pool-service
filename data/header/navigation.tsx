@@ -1,4 +1,4 @@
-import { HeaderType } from '../../components/Header/header';
+import { HeaderType } from 'components/Header/header';
 
 const navigation:HeaderType = {
         'logo':{

@@ -1,4 +1,4 @@
-import { FooterType } from '../../components/Footer/Footer';
+import { FooterType } from 'components/Footer/Footer';
 
 const footer:FooterType = {
     copyRight:"Coastal Clear Pools",

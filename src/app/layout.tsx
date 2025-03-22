@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import React from 'react';
 
-import "../../styles/globals.scss";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
+import "styles/globals.scss";
+import { Header } from "components/Header";
+import { Footer } from "components/Footer";
 
 export const metadata: Metadata = {
   title: "Coastal Clear Pool Repair",

@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image'
 
-import { CTAButton } from '../CTAButton';
+import { CTAButton } from 'components/CTAButton';
 import styles from './FullWidthSection.module.scss';
-import { SettingsInput, CTA, Image as ImageType } from '../../typescript/GlobalComponent';
-import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace, modifyComponentClassMaxWidth, modifyComponentClassAlignContent} from '../../helper'
+import { SettingsInput, CTA, Image as ImageType } from 'typescript/GlobalComponent';
+import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace, modifyComponentClassMaxWidth, modifyComponentClassAlignContent} from 'helper'
 
 /* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = ({

@@ -1,6 +1,6 @@
-import { aboutUsData } from '../../../../data/pages/company/about-us';
-import { HeroSection } from '../../../../components/HeroSection';
-import { RenderComponents } from '../../../../components/RenderComponents';
+import { aboutUsData } from 'data/pages/company/about-us';
+import { HeroSection } from 'components/HeroSection';
+import { RenderComponents } from 'components/RenderComponents';
 
 export default function About() {
   return (

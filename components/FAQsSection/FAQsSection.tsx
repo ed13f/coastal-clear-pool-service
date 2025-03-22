@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 
 import styles from './FAQsSection.module.scss';
-import { SettingsInput} from '../../typescript/GlobalComponent';
-import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from '../../helper'
+import { SettingsInput} from 'typescript/GlobalComponent';
+import {modifyComponentClassBGColor, modifyComponentClassTopSpace, modifyComponentClassBottomSpace } from 'helper'
 
 /* Checks Input settings and assigns root level classes to manupulate the component */
 const modifyClassName = ({

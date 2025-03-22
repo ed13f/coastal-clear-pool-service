@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link'
 
-import { CTA } from '../../typescript/GlobalComponent';
+import { CTA } from 'typescript/GlobalComponent';
 
 type CTAComponent = {
   cta?:CTA

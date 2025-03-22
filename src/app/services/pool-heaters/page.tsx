@@ -1,6 +1,6 @@
-import { poolHeaterData } from '../../../../data/pages/services/pool-heaters';
-import { HeroSection } from '../../../../components/HeroSection';
-import { RenderComponents } from '../../../../components/RenderComponents';
+import { poolHeaterData } from 'data/pages/services/pool-heaters';
+import { HeroSection } from 'components/HeroSection';
+import { RenderComponents } from 'components/RenderComponents';
 
 export default function PoolHeaters() {
   return (
