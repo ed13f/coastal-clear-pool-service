@@ -26,7 +26,7 @@ export const modifyComponentClassTopSpace = (originalString:string, setting: "Re
 export const modifyComponentClassBottomSpace = (originalString:string, setting: "Remove" | "Small" | "Medium" | "Large" | undefined ) => {
   switch(setting) {
     case 'Remove':
-      originalString += ' removeGapBottom'; break;
+      originalString += ' removeGutterBottom'; break;
     case 'Small':
       originalString += ' gutterBottomSm'; break;
     case 'Large':
@@ -80,3 +80,81 @@ export const formatDate = (dateString:string) => {
     return dateString; // or return a default value or error message
   }
 };
+
+export const getServiceData = async (slug:any) => {
+  const WPQL_QUERY = { query:
+      `
+        {
+          service(id: "${slug}", idType: URI) {
+            id
+            title
+            hero {
+              settings {
+                topSpacing
+                bottomSpacing
+                backgroundColor
+                heroType
+              }
+              header
+              description
+              image{
+                node{
+                  sourceUrl
+                  altText
+                }
+              }
+            }
+            serviceContent{
+              fullWidthSection{
+                settings{
+                  topSpacing
+                  bottomSpacing
+                }
+                header
+                description
+              }
+              serviceTabsSection{
+                settings{
+                  topspacing
+                  bottomSpacing
+                }
+                header
+                description
+                cards{
+                  card1{
+                    tab{
+                      image{
+                        node{
+                          sourceUrl
+                          altText
+                        }
+                      }
+                      header
+                    }
+                    card{
+                      image{
+                        node{
+                          sourceUrl
+                          altText
+                        }
+                      }
+                      header
+                      description
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `
+  }
+  const res = await fetch('http://localhost:8888/coastal-clear-pool-service-wp-api/index.php?graphql', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(WPQL_QUERY),
+  })
+  return res.json();
+}
