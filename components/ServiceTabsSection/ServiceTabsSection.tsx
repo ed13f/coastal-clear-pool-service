@@ -56,7 +56,6 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
         const index = event.currentTarget.dataset.index;
         setActiveCard(Number(index));
     };
-    console.log('cards: ', cards[0].card.image.url);
     return (
         <>
         {/* Preload all images that are used in the hidden tab content */}

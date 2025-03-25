@@ -13,9 +13,9 @@ const modifyClassName = (
         backgroundColor,
     }: SettingsInput) => {
     let modifiedClasses = '';
-    modifiedClasses = modifyComponentClassBGColor(modifiedClasses,backgroundColor);
-    modifiedClasses = modifyComponentClassTopSpace(modifiedClasses,topSpacing);
-    modifiedClasses = modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing);
+    modifiedClasses = backgroundColor ? modifyComponentClassBGColor(modifiedClasses,backgroundColor[0]) : modifiedClasses;
+    modifiedClasses = topSpacing ? modifyComponentClassTopSpace(modifiedClasses,topSpacing[0]): modifiedClasses;
+    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing[0]): modifiedClasses;
     return modifiedClasses;
 }
 

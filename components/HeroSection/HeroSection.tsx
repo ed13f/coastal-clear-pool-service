@@ -10,12 +10,18 @@ export type HeroType = {
         header:string;
         description:string;
         cta?:CTAType;
-        image?: ImageType;
+        image?: {
+            node:{
+                sourceUrl:string;
+                altText:string;
+            }
+        };
     }
 }
 
  {/* Conditionally assign hero component based on hero type option */}
 export const HeroSection = ({hero} : HeroType) => {
+    console.log('hero: ', hero.image && hero.image.node);
     return (
         <>
             {hero.settings.heroType == "Two Column (Image)" && (

@@ -12,11 +12,13 @@ const modifyClassName = ({
     bottomSpacing,
     backgroundColor,
   }: SettingsInput) => {
+    console.log('topSpacing: ', topSpacing && topSpacing[0]);
+    console.log('bottomSpacing: ', bottomSpacing && bottomSpacing[0]);
     let modifiedClasses = '';
     modifiedClasses += ' ' + styles.twoColumnImage;
-    modifiedClasses = backgroundColor ? modifyComponentClassBGColor(modifiedClasses,backgroundColor) : modifiedClasses;
-    modifiedClasses = topSpacing ? modifyComponentClassTopSpace(modifiedClasses,topSpacing) : modifiedClasses;
-    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing) : modifiedClasses;
+    modifiedClasses = backgroundColor ? modifyComponentClassBGColor(modifiedClasses, backgroundColor[0]) : modifiedClasses;
+    modifiedClasses = topSpacing && topSpacing[0] ? modifyComponentClassTopSpace(modifiedClasses, topSpacing[0]) : modifiedClasses;
+    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses, bottomSpacing[0]) : modifiedClasses;
     return modifiedClasses;
 }
 
@@ -25,21 +27,26 @@ export type HeroTwoColumnImageType = {
     header:string;
     description:string;
     cta?:CTAType;
-    image?: ImageType;
+    image?: {
+        node:{
+            sourceUrl:string;
+            altText:string;
+        }
+    };
 }
 
 export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: HeroTwoColumnImageType) => {
   return (
     <section className={`hero ${styles.hero} ${modifyClassName(settings)}`}>
         <div className={`container`}>
-            <div className={`${styles.row} row ${(image && !image.url) && styles.noFeaturedImageBackground}`}>
+            <div className={`${styles.row} row ${(image && !image.node.sourceUrl) && styles.noFeaturedImageBackground}`}>
                  {/* Content Column */}
                 <div className={`col-12 col-md-6 order-2 order-md-1`}>
                     <div className={`${styles.contentWrapper}`}>
                         <div className={styles.headerWrapper}>
                             {header && <h1 className={`${styles.header} rico`} dangerouslySetInnerHTML={{ __html: header }}></h1> }
                         </div>  
-                        {description && <p className={`${styles.description} largeText`} dangerouslySetInnerHTML={{ __html: description }}></p> }
+                        {description &&  <div className={` ${styles.description} largeText`} dangerouslySetInnerHTML={{ __html: description }}></div> }
                         {cta?.link && (
                             <div className={`${styles.ctaWrapper}`}>
                                 <CTAButton cta={cta}></CTAButton>
@@ -49,10 +56,10 @@ export const HeroTwoColumnImage = ({ settings, header, description,cta,image}: H
                 </div>
                 {/* Image Column */}
                 <div className={`col-12 col-md-6  order-1 order-md-2 ${styles.imageColumn}`}>
-                    {image && image.url && (
+                    {image && image.node.sourceUrl && (
                         <div className={`imageBorderWrapper ${styles.imageWrapper}`}>
                                 <div className={`imageBorder ${styles.imageBorder}`}>
-                                    <Image  priority={true} src={`${image.url}?auto=webp`} alt={image.altText} fill sizes="100%" style={{objectFit:"cover"}}/>
+                                    <Image  priority={true} src={`${image.node.sourceUrl }`} alt={image.node.altText} fill sizes="100%" style={{objectFit:"cover"}}/>
                                 </div>
                         </div>
                     )}
