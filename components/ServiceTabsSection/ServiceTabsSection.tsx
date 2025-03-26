@@ -19,8 +19,8 @@ const modifyClassName = ({
     bottomSpacing,
   }: SettingsInput) => {
     let modifiedClasses = '';
-    modifiedClasses = topSpacing ? modifyComponentClassTopSpace(modifiedClasses,topSpacing) : modifiedClasses;
-    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing) : modifiedClasses;
+    modifiedClasses = topSpacing ? modifyComponentClassTopSpace(modifiedClasses,topSpacing[0]) : modifiedClasses;
+    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing[0]) : modifiedClasses;
     return modifiedClasses;
 } 
 
@@ -61,7 +61,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
         {/* Preload all images that are used in the hidden tab content */}
         <Head>
             {cards?.map((card) => (
-                (card.card.image && card.card.image.url) && <link key={card.card.image.url} rel="preload" href={`${card.card.image.url}`} as="image" />
+                (card.card.image && card.card.image.node.sourceUrl) && <link key={card.card.image.node.sourceUrl} rel="preload" href={`${card.card.image.node.sourceUrl}`} as="image" />
             ))}
         </Head>
     <section className={`${styles.serviceTabsSection} ${modifyClassName(settings)}`}>
@@ -93,7 +93,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
                                             data-index={ index }
                                             >
                                                 {/* {index == activeCard && <div className={`${styles.progressBarWrapper}`}><TimerProgressBar duration={card.active_time_duration}/></div> } */}
-                                                {(card.tab.image && card.tab.image.url) && <Image className={styles.tabImage} src={`${card.tab.image.url}?auto=webp`} alt={card.tab.image.altText} width={300} height={100}/>}
+                                                {(card.tab.image && card.tab.image.node.sourceUrl) && <Image className={styles.tabImage} src={`${card.tab.image.node.sourceUrl}?auto=webp`} alt={card.tab.image.node.altText} width={300} height={100}/>}
                                                 <h3 className={`${styles.cardHeader}`}>{card.tab.header}</h3>
                                                 <div className={`${styles.cardDescription}`}>{card.tab.intro}</div>
                                             </button>
@@ -112,7 +112,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
                                 {(cards[activeCard] && cards[activeCard].card.cta && cards[activeCard].card.cta?.link) && <div className={`${styles.expandedInfoCTAWrapper}`}><CTAButton cta={cards[activeCard] && cards[activeCard].card.cta}/></div>}
                             </div>
                             <div className={`${styles.expandedInfoImageColumn}`}>
-                            {(cards[activeCard] && cards[activeCard].card.image && cards[activeCard].card.image.url) && <Image className={`boxShadow ${styles.cardImage}`} src={`${cards[activeCard].card.image.url}?auto=webp`} alt={cards[activeCard].card.image.altText} width={1000} height={1000} priority/>}
+                            {(cards[activeCard] && cards[activeCard].card.image && cards[activeCard].card.image.node.sourceUrl) && <Image className={`boxShadow ${styles.cardImage}`} src={`${cards[activeCard].card.image.node.sourceUrl}?auto=webp`} alt={cards[activeCard].card.image.node.altText} width={1000} height={1000} priority/>}
                             </div>
                         </div>
                         )}
@@ -148,7 +148,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
                                 <p  className={`${styles.mobileTabIntro}`}>{slide.tab.intro}</p>
                             </div>
                             <div className={`${styles.mobileContent}`}>
-                                {(slide.card.image && slide.card.image.url) && <Image className={` ${styles.mobileCardImage}`} src={`${slide.card.image.url}?auto=webp`} alt={slide.card.image.altText} width={900} height={450} priority/>}
+                                {(slide.card.image && slide.card.image.node.sourceUrl) && <Image className={` ${styles.mobileCardImage}`} src={`${slide.card.image.node.sourceUrl}?auto=webp`} alt={slide.card.image.node.altText} width={900} height={450} priority/>}
                                 <h4 className={`${styles.mobileExpandedInfoHeader}`} dangerouslySetInnerHTML={{ __html: slide?.card.header }}></h4>
                                 <div className={`${styles.mobileExpandedInfoDescription}`} dangerouslySetInnerHTML={{ __html: slide?.card.description }}></div>
                                 {(slide.card && slide.card.cta?.link) && <div className={`${styles.mobileExpandedInfoCTAWrapper}`}><CTAButton cta={slide && slide.card.cta}/></div>}
