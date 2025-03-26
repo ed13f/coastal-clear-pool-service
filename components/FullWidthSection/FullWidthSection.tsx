@@ -15,9 +15,9 @@ const modifyClassName = ({
     maxWidth,
   }: SettingsInput) => {
     let modifiedClasses = '';
-    modifiedClasses = modifyComponentClassTopSpace(modifiedClasses,topSpacing);
-    modifiedClasses = modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing);
-    modifiedClasses = modifyComponentClassBGColor(modifiedClasses,backgroundColor);
+    modifiedClasses = topSpacing ? modifyComponentClassTopSpace(modifiedClasses,topSpacing[0]): modifiedClasses;
+    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing[0]): modifiedClasses;
+    modifiedClasses = backgroundColor ? modifyComponentClassBGColor(modifiedClasses,backgroundColor[0]): modifiedClasses;
     modifiedClasses = modifyComponentClassAlignContent(modifiedClasses,contentAlignment);
     modifiedClasses = modifyComponentClassMaxWidth(modifiedClasses,maxWidth);
     return modifiedClasses;
@@ -40,9 +40,9 @@ export const FullWidthSection = ({ settings,header,description, cta, image }: Fu
                         <div className={`contentWrapper`}>
                             {header &&  <h2 className={`header`} dangerouslySetInnerHTML={{ __html: header }}></h2> }
                             {description &&  <div className={`description`} dangerouslySetInnerHTML={{ __html: description }}></div> }
-                            {(image && image.url) && (
+                            {(image && image.node.sourceUrl) && (
                                 <div className={`${styles.imageWithBorder} imageBorder`}>
-                                    <Image className={styles.featuredImage} src={`${image.url}?auto=webp`} alt={image.altText} width={900} height={500}/>
+                                    <Image className={styles.featuredImage} src={`${image.node.sourceUrl}?auto=webp`} alt={image.node.altText} width={900} height={500}/>
                                 </div>
                             )}
                             { cta && <div className={`cta-wrapper`}><CTAButton cta={cta}></CTAButton></div> }

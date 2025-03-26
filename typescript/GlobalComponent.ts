@@ -5,9 +5,11 @@ export type CTA = {
 };
 
 export type Image = {
-  url: string;
-  altText: string;
-}
+  node:{
+      sourceUrl:string;
+      altText:string;
+  }
+};
 
 export type SettingsInput = {
   topSpacing?: ['Remove'] | ['Small'] | ['Medium'] | ['Large'] | undefined;

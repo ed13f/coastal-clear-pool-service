@@ -211,7 +211,7 @@
         height:auto;
         object-fit:cover;
         border-radius:8px;
-        aspect-ratio: 3.2 / 1;
+        aspect-ratio: 2.75 / 1;
         border: 1px solid $color-grey;
         background-color:$color-grey;
     }
@@ -440,6 +440,7 @@
         width:auto;
         object-fit:cover;
         border-radius:10px;
+        width:100%;
     }
     .mobileTabHeader{
         margin-top:0;
