@@ -30,7 +30,7 @@ export type RenderComponentsType = {
 
 // Used to consolidate the way components are added to the page dynamically based on he json
 export function RenderComponents({pageComponent}: RenderComponentsType) {
-  console.log('pageComponent[1]: ', pageComponent[1]);
+  console.log('pageComponent[0]: ', pageComponent[0]);
     return (
     <>
         { pageComponent?.map((component, key: number) => {

@@ -109,7 +109,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
                             <div className={`${styles.expandedInfoContentColumn}`}>
                                 <h3 className={`${styles.expandedInfoHeader}`} dangerouslySetInnerHTML={{ __html: cards[activeCard]?.card.header }}></h3>
                                 <div className={`${styles.expandedInfoDescription}`} dangerouslySetInnerHTML={{ __html: cards[activeCard]?.card.description }}></div>
-                                {(cards[activeCard] && cards[activeCard].card.cta && cards[activeCard].card.cta?.link) && <div className={`${styles.expandedInfoCTAWrapper}`}><CTAButton cta={cards[activeCard] && cards[activeCard].card.cta}/></div>}
+                                {(cards[activeCard] && cards[activeCard].card.cta && cards[activeCard].card.cta?.url) && <div className={`${styles.expandedInfoCTAWrapper}`}><CTAButton cta={cards[activeCard] && cards[activeCard].card.cta}/></div>}
                             </div>
                             <div className={`${styles.expandedInfoImageColumn}`}>
                             {(cards[activeCard] && cards[activeCard].card.image && cards[activeCard].card.image.node.sourceUrl) && <Image className={`boxShadow ${styles.cardImage}`} src={`${cards[activeCard].card.image.node.sourceUrl}?auto=webp`} alt={cards[activeCard].card.image.node.altText} width={1000} height={1000} priority/>}
@@ -151,7 +151,7 @@ export const ServiceTabsSection = ({ settings,header,description,cards }: Servic
                                 {(slide.card.image && slide.card.image.node.sourceUrl) && <Image className={` ${styles.mobileCardImage}`} src={`${slide.card.image.node.sourceUrl}?auto=webp`} alt={slide.card.image.node.altText} width={900} height={450} priority/>}
                                 <h4 className={`${styles.mobileExpandedInfoHeader}`} dangerouslySetInnerHTML={{ __html: slide?.card.header }}></h4>
                                 <div className={`${styles.mobileExpandedInfoDescription}`} dangerouslySetInnerHTML={{ __html: slide?.card.description }}></div>
-                                {(slide.card && slide.card.cta?.link) && <div className={`${styles.mobileExpandedInfoCTAWrapper}`}><CTAButton cta={slide && slide.card.cta}/></div>}
+                                {(slide.card && slide.card.cta?.url) && <div className={`${styles.mobileExpandedInfoCTAWrapper}`}><CTAButton cta={slide && slide.card.cta}/></div>}
                             </div>
                         </div>
                     </SwiperSlide>

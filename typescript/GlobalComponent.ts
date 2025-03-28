@@ -1,7 +1,7 @@
 export type CTA = {
-  link: string;
+  url: string;
   title: string;
-  openInNewWindow?:boolean;
+  target?:boolean;
 };
 
 export type Image = {
@@ -16,8 +16,8 @@ export type SettingsInput = {
   bottomSpacing?: ['Remove'] | ['Small'] | ['Medium'] | ['Large'] | undefined;
   backgroundColor?: ['Grey'] | ['Blue'] | undefined;
   heroType?: 'Two Column (Image)' | 'Single Column';
-  contentAlignment?: 'Left' | 'Center' | 'Right' | undefined;
-  maxWidth?: 'Small' | 'Medium' | 'Large' | undefined;
+  contentAlignment?: ['Left'] | ['Center'] | ['Right'] | undefined;
+  maxWidth?: ['Small'] | ['Medium'] | ['Large'] | undefined;
   fullWidthContainer?:boolean;
   displayBackgroundSquare?:boolean;
   reverseColumns?:boolean;

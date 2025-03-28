@@ -111,9 +111,15 @@ export const getServiceData = async (slug:any) => {
                   bottomSpacing
                   backgroundColor
                   contentAlignment
+                  maxWidth
                 }
                 header
                 description
+                cta{
+                  url
+                  title
+                  target
+                }
               }
               serviceTabsSection{
                 settings{
@@ -227,10 +233,10 @@ export const getServiceData = async (slug:any) => {
 export const constructServiceTabsData = (serviceTabsSection:any) => {
   const cardsData = serviceTabsSection.cards;
   const formattedCards:any = [];
-  cardsData.card1 && formattedCards.push(cardsData.card1);
-  cardsData.card1 && formattedCards.push(cardsData.card2);
-  cardsData.card1 && formattedCards.push(cardsData.card3);
-  cardsData.card1 && formattedCards.push(cardsData.card4);
+  cardsData.card1.tab.header && formattedCards.push(cardsData.card1);
+  cardsData.card2.tab.header && formattedCards.push(cardsData.card2);
+  cardsData.card3.tab.header && formattedCards.push(cardsData.card3);
+  cardsData.card4.tab.header && formattedCards.push(cardsData.card4);
   serviceTabsSection.cards = formattedCards ;
   return serviceTabsSection
 }

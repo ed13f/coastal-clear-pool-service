@@ -16,10 +16,10 @@ const modifyClassName = ({
   }: SettingsInput) => {
     let modifiedClasses = '';
     modifiedClasses = topSpacing ? modifyComponentClassTopSpace(modifiedClasses,topSpacing[0]): modifiedClasses;
-    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing[0]): modifiedClasses;
-    modifiedClasses = backgroundColor ? modifyComponentClassBGColor(modifiedClasses,backgroundColor[0]): modifiedClasses;
-    modifiedClasses = modifyComponentClassAlignContent(modifiedClasses,contentAlignment);
-    modifiedClasses = modifyComponentClassMaxWidth(modifiedClasses,maxWidth);
+    modifiedClasses = bottomSpacing ? modifyComponentClassBottomSpace(modifiedClasses,bottomSpacing[0]) : modifiedClasses;
+    modifiedClasses = backgroundColor ? modifyComponentClassBGColor(modifiedClasses,backgroundColor[0]) : modifiedClasses;
+    modifiedClasses = contentAlignment ? modifyComponentClassAlignContent(modifiedClasses,contentAlignment[0]) : modifiedClasses;
+    modifiedClasses = maxWidth ? modifyComponentClassMaxWidth(modifiedClasses,maxWidth[0]) : modifiedClasses;
     return modifiedClasses;
 } 
 
